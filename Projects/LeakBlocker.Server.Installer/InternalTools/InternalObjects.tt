@@ -1,0 +1,16 @@
+﻿
+<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "IServiceHelper",	          "ServiceHelper", isInternal:true ), 
+    new SingletonDeclaration( "IProductRegistrator",      "ProductRegistrator", isInternal:true ), 
+    new SingletonDeclaration( "IFirewallExceptionHelper", "FirewallExceptionHelper", isInternal:true ), 
+    new SingletonDeclaration( "IFileSystemConstants",     "FileSystemConstants", isInternal:true ), 
+};
+ 
+#>
+
+using LeakBlocker.Server.Installer.InternalTools;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

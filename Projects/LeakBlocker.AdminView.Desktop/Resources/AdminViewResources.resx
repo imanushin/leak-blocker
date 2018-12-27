@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddDomain" xml:space="preserve">
+    <value>Add domain</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="BlockedArea" xml:space="preserve">
+    <value>Blocked area: {0} computer(s)</value>
+  </data>
+  <data name="Computer" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="ComputersInScope" xml:space="preserve">
+    <value>Computers in scope ({0}):</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="DomainWasntFound" xml:space="preserve">
+    <value>Domain {0} was not found.</value>
+  </data>
+  <data name="Excluded" xml:space="preserve">
+    <value>Excluded: {0} computer(s)</value>
+  </data>
+  <data name="FindDomains" xml:space="preserve">
+    <value>Find domains</value>
+  </data>
+  <data name="FindInAnotherDomain" xml:space="preserve">
+    <value>Search in another domain...</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="ObjectIsntDomain" xml:space="preserve">
+    <value>{0} is not a valid domain.</value>
+  </data>
+  <data name="OUShort" xml:space="preserve">
+    <value>Organizational Unit</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password: </value>
+  </data>
+  <data name="PleaseEnterComputerScope" xml:space="preserve">
+    <value>Please enter computer scope:</value>
+  </data>
+  <data name="PleaseEnterCredentialsForDomain" xml:space="preserve">
+    <value>Please specify credentials for domain {0}. They will be used for requesting necessary information from it and installing Leak Blocker agents in future.</value>
+  </data>
+  <data name="PleaseEnterDomain" xml:space="preserve">
+    <value>Please enter domain.</value>
+  </data>
+  <data name="PleaseEnterPassword" xml:space="preserve">
+    <value>Please enter password.</value>
+  </data>
+  <data name="PleaseEnterUserName" xml:space="preserve">
+    <value>Please enter user name.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UnableToFindObject" xml:space="preserve">
+    <value>Please enter the domain that contains object "{0}".</value>
+  </data>
+  <data name="UnableToFindObjectInDomains" xml:space="preserve">
+    <value>Please enter the domain that contains object "{0}".
+Currently observed domains: "{1}"</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User: </value>
+  </data>
+  <data name="DomainInput" xml:space="preserve">
+    <value>Domain:</value>
+  </data>
+  <data name="ExcludeComputer" xml:space="preserve">
+    <value>Exclude the selected computers from the scope (add to the white list)</value>
+  </data>
+  <data name="BasicConfigurationTitle" xml:space="preserve">
+    <value>Leak Blocker - Basic Configuration</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced...</value>
+  </data>
+  <data name="AllowDevices" xml:space="preserve">
+    <value>Allow devices</value>
+  </data>
+  <data name="BlockDevices" xml:space="preserve">
+    <value>Block devices</value>
+  </data>
+  <data name="DevicesWhiteList" xml:space="preserve">
+    <value>Devices white list</value>
+  </data>
+  <data name="LockOptions" xml:space="preserve">
+    <value>Device access options</value>
+  </data>
+  <data name="AllowInputDevices" xml:space="preserve">
+    <value>Allow user input devices</value>
+  </data>
+  <data name="InputDevicesDescription" xml:space="preserve">
+    <value>E. g. mice, keyboards, web-cameras.</value>
+  </data>
+  <data name="ComputerScopeExamples" xml:space="preserve">
+    <value>E. g. domain, computer, group with computers, organizational unit.
+Domain is a scope which contains several computers, minimum one (domain controller).
+Computer scope always contains only one computer.
+Organizational Unit is the part of the domain tree. It can contain any number of computers.
+Security group can also contain any number of computers.</value>
+  </data>
+  <data name="RequestingComputer" xml:space="preserve">
+    <value>Requesting computer {0}</value>
+  </data>
+  <data name="ExcludeFromBlocking" xml:space="preserve">
+    <value>Exclude from blocking</value>
+  </data>
+  <data name="ContinueBlocking" xml:space="preserve">
+    <value>Continue blocking</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="PleaseEnterUserScope" xml:space="preserve">
+    <value>Please enter user scope:</value>
+  </data>
+  <data name="UserScopeExamples" xml:space="preserve">
+    <value>E. g. user, domain group with users, local group with users, organizational unit.
+User scope always contains only one user.
+Security group can contain any number of users.
+Local group is equivalent to domain security group but it only affects the computer that contains it.
+Organizational Unit is the part of the domain tree. It also can contain any number of users.</value>
+  </data>
+  <data name="ScopeSelectionTitle" xml:space="preserve">
+    <value>Scope selection</value>
+  </data>
+  <data name="UserScope" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="AdvancedOptions" xml:space="preserve">
+    <value>Advanced options</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Audit" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ComputerNameTemplate" xml:space="preserve">
+    <value>Computer {0}</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Exclude</value>
+  </data>
+  <data name="OpenAudit" xml:space="preserve">
+    <value>View audit...</value>
+  </data>
+  <data name="OpenAuditFromComputers" xml:space="preserve">
+    <value>View audit for the selected computers</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ConnectedDevices" xml:space="preserve">
+    <value>Connected devices:</value>
+  </data>
+  <data name="ConnectedUsers" xml:space="preserve">
+    <value>Logged on users:</value>
+  </data>
+  <data name="NoDevicesToPresent" xml:space="preserve">
+    <value>No devices to display</value>
+  </data>
+  <data name="NoUsersToPresent" xml:space="preserve">
+    <value>No users to display</value>
+  </data>
+  <data name="EnterCredentialsHelpDONT_USED" xml:space="preserve">
+    <value>Please enter credentials to access to object "{0}".
+If "{0}" is domain please enter the login and password to get objects from it.
+If "{0}" is computer please enter the login and password of the local administrator or credentials of domain which contains it.
+Otherwise please enter the domain or computer which contains "{0}"</value>
+    <comment>unused</comment>
+  </data>
+  <data name="FirstCredentialsEnterHelp" xml:space="preserve">
+    <value>Please enter domain account to operate with the entire domain or part of it.
+Please enter local administrator account to operate with computer that is not joined to a domain.</value>
+  </data>
+  <data name="FirstCredentialsEnterText" xml:space="preserve">
+    <value>Please specify computer or domain for device access management.</value>
+  </data>
+  <data name="ManagedComputerTextTemplate" xml:space="preserve">
+    <value>Computer: {0} (status: {1})</value>
+  </data>
+  <data name="SelectSingleComputerFirst" xml:space="preserve">
+    <value>Select one computer to view detailed information</value>
+  </data>
+  <data name="ApplyChanges" xml:space="preserve">
+    <value>Apply changes</value>
+  </data>
+  <data name="ConfigurationChanges" xml:space="preserve">
+    <value>Configuration changes:</value>
+  </data>
+  <data name="ExcludeComputerTemplate" xml:space="preserve">
+    <value>Exclude computer
+{0}</value>
+  </data>
+  <data name="AllowReadOnlyAccess" xml:space="preserve">
+    <value>Allow read-only access if possible</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="PleaseEnterComputerName" xml:space="preserve">
+    <value>Please enter computer name.</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="SendTestMail" xml:space="preserve">
+    <value>Send test message</value>
+  </data>
+  <data name="UsersWhiteListDescription" xml:space="preserve">
+    <value>These users will be excluded from the blocking scope. All devices will be fully available for them. All activity will be logged as usual.</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Buy...</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code:</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Enter code...</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>License information: {0} computer(s).</value>
+  </data>
+  <data name="NewLicenseCount" xml:space="preserve">
+    <value>New license count:</value>
+  </data>
+  <data name="PleaseEnterHowMayLicensesYouNeed" xml:space="preserve">
+    <value>Please enter number of required licenses. At the moment agents can be installed on {0} computer(s).</value>
+  </data>
+  <data name="PleaseEnterLicenseCode" xml:space="preserve">
+    <value>Please enter license code.</value>
+  </data>
+  <data name="RetrievingLicenseData" xml:space="preserve">
+    <value>Retrieving license data...</value>
+  </data>
+  <data name="LicenseWillBeAvailableUntil" xml:space="preserve">
+    <value>License will expire at {0}</value>
+  </data>
+  <data name="ErrorWasOccured" xml:space="preserve">
+    <value>An error has occurred:
+{0}</value>
+  </data>
+  <data name="LicenseIsInvalid" xml:space="preserve">
+    <value>You have entered an invalid license code</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="BuyAdditionalLicenses" xml:space="preserve">
+    <value>Buy additional licenses</value>
+  </data>
+  <data name="EnterLicenseCode" xml:space="preserve">
+    <value>Enter license code</value>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>Leak Blocker is intended to control access to removable devices like USB sticks, external hard disk drives and other. It allows to restrict access to removable devices and track user activity.</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company name:</value>
+  </data>
+  <data name="PleaseEnterCompanyName" xml:space="preserve">
+    <value>Please enter your company name</value>
+  </data>
+  <data name="PleaseSelectTemporaryAccessConditionsToCancel" xml:space="preserve">
+    <value>The list below contains currently enabled temporary access rules.
+Please select those rules that you want to cancel.</value>
+  </data>
+  <data name="UpdateCredentials" xml:space="preserve">
+    <value>Update credentials...</value>
+  </data>
+  <data name="PleaseEnterCredentialsForAccessingToLocalComputer" xml:space="preserve">
+    <value>Please specify credentials for accessing the computer </value>
+  </data>
+  <data name="PleaseEnterCredentials" xml:space="preserve">
+    <value>Please specify credentials</value>
+  </data>
+  <data name="PleaseEnterCredentialsForAccessingToEntireDomain" xml:space="preserve">
+    <value>Please specify credentials for accessing the entire domain</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Create new...</value>
+  </data>
+  <data name="NoAuditFiltersText" xml:space="preserve">
+    <value>Here you can view audit collected by Leak Blocker.
+Click the "Create new..." button to start observing product logs.</value>
+  </data>
+  <data name="ExceptionInConfigurationLoagingTemplate" xml:space="preserve">
+    <value>There were errors during loading the configuration. Please check that Leak Blocker service is running (see Windows Services console). If the problem still exists please contact technical support (support@deltacorvi.com).
+
+Internal error message: {0}</value>
+  </data>
+  <data name="AddDeviceToTheWhiteListTemplate" xml:space="preserve">
+    <value>Add device to the white list:
+{0}.</value>
+  </data>
+  <data name="AddToWhiteList" xml:space="preserve">
+    <value>Add to the white list</value>
+  </data>
+  <data name="AddUserToTheWhiteListTemplate" xml:space="preserve">
+    <value>Add user to the white list:
+{0}.</value>
+  </data>
+  <data name="AgentPasswordDescriptionText" xml:space="preserve">
+    <value>Leak Blocker agent is protected from unauthorized uninstalling. If you need to remove agent without connection to the server use the following password. Please copy and save it.
+
+Agent Setup Password:</value>
+  </data>
+  <data name="AgentPasswordTitle" xml:space="preserve">
+    <value>Agent password</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="SendToEmail" xml:space="preserve">
+    <value>Send by email...</value>
+  </data>
+  <data name="ReceivingAgentPassword" xml:space="preserve">
+    <value>Requesting Agent Setup Password...</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="PleaseEnterEmailForAgentSetupPassword" xml:space="preserve">
+    <value>Please specify email settings for sending Agent Setup Password.</value>
+  </data>
+  <data name="ThereWereErrorDuringSendingMailTemplate" xml:space="preserve">
+    <value>There were errors during sending email:
+{0}</value>
+  </data>
+  <data name="ErrorDuringScopeUpdating" xml:space="preserve">
+    <value>Unable to update scope because of error:
+{0}</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RetrievingInformationAboutDomain" xml:space="preserve">
+    <value>Retrieving information about domain {0}</value>
+  </data>
+  <data name="SavingConfiguration" xml:space="preserve">
+    <value>Saving configuration...</value>
+  </data>
+  <data name="RetrievingInformationAbout" xml:space="preserve">
+    <value>Retrieving information about {0}</value>
+  </data>
+  <data name="CloseTab" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CheckingCredentials" xml:space="preserve">
+    <value>Checking credentials...</value>
+  </data>
+  <data name="AgentsInScope" xml:space="preserve">
+    <value>{0} agents in scope</value>
+  </data>
+  <data name="ScopeCountTemplate" xml:space="preserve">
+    <value> - {0}</value>
+  </data>
+  <data name="PleaseEnterThePassword" xml:space="preserve">
+    <value>Please enter password.</value>
+  </data>
+  <data name="PleaseEnterTheFromAddress" xml:space="preserve">
+    <value>Please enter 'From' address</value>
+  </data>
+  <data name="PleaseEnterTheToAddress" xml:space="preserve">
+    <value>Please enter 'To' address</value>
+  </data>
+  <data name="PleaseEnterTheSmtpHost" xml:space="preserve">
+    <value>Please enter mail server.</value>
+  </data>
+  <data name="PleaseEnterTheUserName" xml:space="preserve">
+    <value>Please enter user name.</value>
+  </data>
+  <data name="TimeColumnHint" xml:space="preserve">
+    <value>All time was converted to the current time zone: {0}</value>
+  </data>
+  <data name="UnableToRetrieveAuditData" xml:space="preserve">
+    <value>Unable to retrieve audit data:
+{0}</value>
+  </data>
+  <data name="LastItemsShownTemplate" xml:space="preserve">
+    <value>Showing last {0} items.</value>
+  </data>
+  <data name="SavingReport" xml:space="preserve">
+    <value>Saving report...</value>
+  </data>
+  <data name="ErrorOccurredDuringSavingAuditDataTemplate" xml:space="preserve">
+    <value>An error has occurred during saving {0} to file {1}:
+{2}</value>
+  </data>
+  <data name="RetrievingAudit" xml:space="preserve">
+    <value>Retrieving audit...</value>
+  </data>
+  <data name="UnableToRetrieveComputerStatusesTemplate" xml:space="preserve">
+    <value>Unable to retrieve computer statuses because of error:
+{0}</value>
+  </data>
+  <data name="ErrorInStatusUpdating" xml:space="preserve">
+    <value>Status updating failed. Click here for details.</value>
+  </data>
+  <data name="ForceAgentInstallation" xml:space="preserve">
+    <value>Force agent installation</value>
+  </data>
+  <data name="Updating" xml:space="preserve">
+    <value>Updating...</value>
+  </data>
+  <data name="EnableFileAudit" xml:space="preserve">
+    <value>Enable file audit</value>
+  </data>
+  <data name="ServerDevices" xml:space="preserve">
+    <value>Connected devices:</value>
+  </data>
+  <data name="ConnectedDevicesHelp" xml:space="preserve">
+    <value>These devices are connected to the Leak Blocker Server. You may add any of them to the White List.
+If you want to unlock device connected to the another computer please do the following steps:
+1. Go to the Statuses page;
+2. Select computers with the target devices connected;
+3. Open the context menu of the device in the rigth bottom panel;
+4. Select "Exclude"</value>
+  </data>
+</root>

@@ -1,0 +1,12 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.DateTimePicker"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:textBoxes="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.TextBoxes"
+                xmlns:upDowns="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.UpDowns"
+                x:ClassModifier="internal">
+    <StackPanel Orientation="Horizontal">
+        <DatePicker Name="datePicker" x:FieldModifier="private" />
+        <textBoxes:TimeRestrictedTextBox x:Name="timeTextBox" VerticalContentAlignment="Center" Margin="3,0,0,0" />
+        <upDowns:UpDown UpClicked="TimeUpClicked" DownClicked="TimeDownClicked" Height="{Binding ElementName=timeTextBox, Path=ActualHeight}"/>
+    </StackPanel>
+</ContentControl>

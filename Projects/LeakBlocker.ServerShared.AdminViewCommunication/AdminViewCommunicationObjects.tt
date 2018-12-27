@@ -1,0 +1,13 @@
+﻿<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "ILocalKeysAgreementHelper", "LocalKeysAgreementHelper", false ),
+    
+};
+
+#>
+
+using LeakBlocker.ServerShared.AdminViewCommunication.KeysAgreement;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

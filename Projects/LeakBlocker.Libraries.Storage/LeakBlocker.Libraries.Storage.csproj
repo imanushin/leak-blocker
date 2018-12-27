@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0074249A-9FB0-4242-A942-9682D7FE8E7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Libraries.Storage</RootNamespace>
+    <AssemblyName>LeakBlocker.Libraries.Storage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Binaries\LeakBlocker.Libraries.Storage.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <DocumentationFile>..\Binaries\LeakBlocker.Libraries.Storage.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\Entity Framework\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\SQL CE 4.0\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="AccountManager.cs" />
+    <Compile Include="AgentEncryptionDataManager.cs" />
+    <Compile Include="AuditItemsManager.cs" />
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="CredentialsManager.cs" />
+    <Compile Include="Entities\DbAgentEncryptionData.cs" />
+    <Compile Include="Entities\DbDeviceTypeRuleCondition.cs" />
+    <Compile Include="IAgentEncryptionDataManager.cs" />
+    <Compile Include="InternalTools\CrossRequestCache.cs" />
+    <Compile Include="InternalTools\DatabaseCache.cs" />
+    <Compile Include="InternalTools\DatabaseConstants.cs" />
+    <Compile Include="InternalTools\DatabaseInitializer.cs" />
+    <Compile Include="InternalTools\DatabaseModel.cs" />
+    <Compile Include="InternalTools\DatabaseModelGenerated.cs" />
+    <Compile Include="DevicesManager.cs" />
+    <Compile Include="Entities\DbAccountSecurityIdentifier.cs" />
+    <Compile Include="Entities\DbActionData.cs" />
+    <Compile Include="Entities\DbAuditItem.cs" />
+    <Compile Include="Entities\DbCompositeRuleCondition.cs" />
+    <Compile Include="Entities\DbComputerListRuleCondition.cs" />
+    <Compile Include="Entities\DbComputerTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\DbCredentials.cs" />
+    <Compile Include="Entities\DbDeviceListRuleCondition.cs" />
+    <Compile Include="Entities\DbDeviceTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\DbDomainAccount.cs" />
+    <Compile Include="Entities\DbDomainComputerAccount.cs" />
+    <Compile Include="Entities\DbDomainComputerGroupAccount.cs" />
+    <Compile Include="Entities\DbDomainComputerUserAccount.cs" />
+    <Compile Include="Entities\DbDomainGroupAccount.cs" />
+    <Compile Include="Entities\DbDomainUserAccount.cs" />
+    <Compile Include="Entities\DbLocalComputerAccount.cs" />
+    <Compile Include="Entities\DbLocalGroupAccount.cs" />
+    <Compile Include="Entities\DbLocalUserAccount.cs" />
+    <Compile Include="Entities\DbDeviceDescription.cs" />
+    <Compile Include="Entities\DbOrganizationalUnit.cs" />
+    <Compile Include="Entities\DbProgramConfiguration.cs" />
+    <Compile Include="Entities\DbRule.cs" />
+    <Compile Include="Entities\DbUserListRuleCondition.cs" />
+    <Compile Include="Entities\DbUserTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\InternalEntites.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAccountManager.cs" />
+    <Compile Include="IAuditItemsManager.cs" />
+    <Compile Include="IConfigurationManager.cs" />
+    <Compile Include="ICredentialsManager.cs" />
+    <Compile Include="ICrossRequestCache.cs" />
+    <Compile Include="IDatabaseConstants.cs" />
+    <Compile Include="Entities\IKeyedItem.cs" />
+    <Compile Include="IDevicesManager.cs" />
+    <Compile Include="InternalTools\IDatabaseInitializer.cs" />
+    <Compile Include="InternalTools\IDatabaseModel.cs" />
+    <Compile Include="InternalTools\IIndexInitializer.cs" />
+    <Compile Include="InternalTools\IndexInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageObjects.cs">
+      <DependentUpon>StorageObjects.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StorageObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StorageObjects.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{f3ad6e13-2706-46c5-9109-bf94c77b47d6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CommonProperties\CodeAnalysisDictionary.xml">
+      <Link>Properties\CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\Signer.exe" "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

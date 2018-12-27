@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Libraries.Common</RootNamespace>
+    <AssemblyName>LeakBlocker.Libraries.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.Libraries.Common.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.Libraries.Common.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="BaseObjectSerializer.cs" />
+    <Compile Include="Collections\IReadOnlyCollection.cs" />
+    <Compile Include="Collections\ReadOnlyMatrix.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryptionProvider.cs" />
+    <Compile Include="Cryptography\AsymmetricPrivateEncryptionKey.cs" />
+    <Compile Include="Cryptography\AsymmetricPublicEncryptionKey.cs" />
+    <Compile Include="Cryptography\EncryptionKey.cs" />
+    <Compile Include="Cryptography\EncryptionProvider.cs" />
+    <Compile Include="Entities\DeviceAccessMap.cs" />
+    <Compile Include="Entities\DeviceAccessType.cs" />
+    <Compile Include="Entities\Settings\AuditMap.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\DeviceTypeRuleCondition.cs" />
+    <Compile Include="Entities\UserContactInformation.cs" />
+    <Compile Include="ExceptionExtensions.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="Implementations\ExceptionSuppressor.cs" />
+    <Compile Include="ForbiddenToUseAttribute.cs" />
+    <Compile Include="IExceptionSuppressor.cs" />
+    <Compile Include="Cryptography\SymmetricEncryptionKey.cs" />
+    <Compile Include="BaseReadOnlyObject.cs" />
+    <Compile Include="Collections\DisplacingCache.cs" />
+    <Compile Include="Collections\ReadOnlyList.cs" />
+    <Compile Include="Collections\CollectionExtensions.cs" />
+    <Compile Include="Collections\ReadOnlySet.cs" />
+    <Compile Include="Entities\Audit\AuditFilter.cs" />
+    <Compile Include="Entities\Audit\AuditItem.cs" />
+    <Compile Include="Entities\Audit\IReportCreator.cs" />
+    <Compile Include="Entities\Audit\LinkedEnumAttribute.cs" />
+    <Compile Include="Entities\Audit\AuditItemGroupType.cs" />
+    <Compile Include="Entities\Audit\AuditItemSeverityType.cs" />
+    <Compile Include="Entities\Audit\AuditItemType.cs" />
+    <Compile Include="Entities\Audit\LinkedEnumHelper.cs" />
+    <Compile Include="Entities\Audit\ReportCreator.cs" />
+    <Compile Include="Entities\Audit\ReportFilter.cs" />
+    <Compile Include="Entities\Audit\ReportType.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\DeviceDescription.cs" />
+    <Compile Include="Entities\DeviceCategory.cs" />
+    <Compile Include="Entities\Security\Account.cs" />
+    <Compile Include="Entities\Security\AccountSecurityIdentifier.cs" />
+    <Compile Include="Entities\Security\AgentEncryptionData.cs" />
+    <Compile Include="Entities\Security\BaseComputerAccount.cs" />
+    <Compile Include="Entities\Security\BaseDomainAccount.cs" />
+    <Compile Include="Entities\Security\BaseGroupAccount.cs" />
+    <Compile Include="Entities\Security\BaseUserAccount.cs" />
+    <Compile Include="Entities\Security\Credentials.cs" />
+    <Compile Include="Entities\Security\DomainAccount.cs" />
+    <Compile Include="Entities\Security\DomainComputerAccount.cs" />
+    <Compile Include="Entities\Security\DomainComputerGroupAccount.cs" />
+    <Compile Include="Entities\Security\DomainComputerUserAccount.cs" />
+    <Compile Include="Entities\Security\DomainGroupAccount.cs" />
+    <Compile Include="Entities\Security\DomainUserAccount.cs" />
+    <Compile Include="Entities\Security\IBaseDomainMember.cs" />
+    <Compile Include="Entities\Security\IDomainMember.cs" />
+    <Compile Include="Entities\Security\IGroupMember.cs" />
+    <Compile Include="Entities\Security\IScopeObject.cs" />
+    <Compile Include="Entities\Security\LocalComputerAccount.cs" />
+    <Compile Include="Entities\Security\LocalGroupAccount.cs" />
+    <Compile Include="Entities\Security\LocalUserAccount.cs" />
+    <Compile Include="Entities\Security\OrganizationalUnit.cs" />
+    <Compile Include="Entities\Settings\ProgramConfiguration.cs" />
+    <Compile Include="Entities\Settings\Rules\ActionData.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\BaseRuleCondition.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\CompositeRuleCondition.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\ComputerListRuleCondition.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\DeviceListRuleCondition.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\BaseTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\ComputerTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\DeviceTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\UserTemporaryAccessCondition.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\UserListRuleCondition.cs" />
+    <Compile Include="Entities\Settings\Rules\Rule.cs" />
+    <Compile Include="Entities\Settings\Rules\RuleActions.cs" />
+    <Compile Include="EnumerationExtensions.cs" />
+    <Compile Include="IAsyncInvoker.cs" />
+    <Compile Include="Implementations\AsyncInvoker.cs" />
+    <Compile Include="IoC\BaseFactory.cs" />
+    <Compile Include="IScheduler.cs" />
+    <Compile Include="IWaitHandle.cs" />
+    <Compile Include="License\ILicenseLinkManager.cs" />
+    <Compile Include="License\LicenseInfo.cs" />
+    <Compile Include="License\LicenseLinkManager.cs" />
+    <Compile Include="License\LicenseRequestData.cs" />
+    <Compile Include="Network\BaseClient.cs" />
+    <Compile Include="Network\BaseNetworkHost.cs" />
+    <Compile Include="Network\BaseServer.cs" />
+    <Compile Include="Cryptography\SymmetricEncryptionProvider.cs" />
+    <Compile Include="Network\IBaseNetworkHost.cs" />
+    <Compile Include="Network\IBaseNetworkInterface.cs" />
+    <Compile Include="Network\ISecurytyObjectResolver.cs" />
+    <Compile Include="Network\NetworkObjectAttribute.cs" />
+    <Compile Include="Network\ObjectFormatter.cs" />
+    <Compile Include="PeriodicCheck.cs" />
+    <Compile Include="Resources\AgentInstallerStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentInstallerStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AgentServiceStrings.Designer.cs">
+      <DependentUpon>AgentServiceStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AuditItemGroupTypeStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditItemGroupTypeStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AuditItemSeverityTypeStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditItemSeverityTypeStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AuditItemTypeDescriptions.Designer.cs">
+      <DependentUpon>AuditItemTypeDescriptions.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AuditStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CommonStrings.Designer.cs">
+      <DependentUpon>CommonStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\DeviceCategoryStrings.Designer.cs">
+      <DependentUpon>DeviceCategoryStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EnumerationDescriptionProviderAttribute.cs" />
+    <Compile Include="Resources\ManagedComputerStatusResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagedComputerStatusResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ReportStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ScopeTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScopeTypeResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ServerStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TemporaryAccessStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemporaryAccessStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DeviceDescriptionStateStrings.Designer.cs">
+      <DependentUpon>DeviceDescriptionStateStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StringCanBeEmptyAttribute.cs" />
+    <Compile Include="CodeAnalysisAttributes.cs" />
+    <Compile Include="Collections\DictionaryExtensions.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="StringNamedFormatter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Implementations\CommandLine.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="CommonInterfaces\ICommandLine.cs" />
+    <Compile Include="Implementations\Constants.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Disposable.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="Equality\EnumerableComparer.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Equality\EnumerableHashCode.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Check.cs" />
+    <Compile Include="CommonInterfaces\IConstants.cs" />
+    <Compile Include="Implementations\EnvironmentWrapper.cs" />
+    <Compile Include="CommonInterfaces\IEnvironment.cs" />
+    <Compile Include="IoC\Factory.cs" />
+    <Compile Include="IoC\Singleton.cs" />
+    <Compile Include="IoC\TestContextData.cs" />
+    <Compile Include="SharedObjects.cs">
+      <DependentUpon>SharedObjects.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Implementations\Scheduler.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemTools\IThreadPool.cs" />
+    <Compile Include="SystemTools\NativeThreadPool.cs" />
+    <Compile Include="ThreadPoolExtensions.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="TimeSpanExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SharedObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SharedObjects.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AgentInstallerStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AgentInstallerStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AgentServiceStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AgentServiceStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AuditItemGroupTypeStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AuditItemGroupTypeStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AuditItemSeverityTypeStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AuditItemSeverityTypeStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AuditItemTypeDescriptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AuditItemTypeDescriptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AuditStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AuditStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CommonStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeviceCategoryStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DeviceCategoryStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ManagedComputerStatusResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagedComputerStatusResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ReportStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ScopeTypeResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ScopeTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ServerStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServerStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TemporaryAccessStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemporaryAccessStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeviceDescriptionStateStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DeviceDescriptionStateStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="License\LicensePublicKey.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CommonProperties\CodeAnalysisDictionary.xml">
+      <Link>Properties\CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\TestsGenerator.exe" "$(ProjectDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\EntitiesGenerator.exe" "$(SolutionDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\Signer.exe" "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

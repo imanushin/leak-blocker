@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{428C380E-21A0-499B-974F-13E30E8FE4CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Libraries.SystemTools.Tests</RootNamespace>
+    <AssemblyName>LeakBlocker.Libraries.SystemTools.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\Rhino.Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="Devices\Implementations\SystemDeviceTest.cs" />
+    <Compile Include="Devices\Management\DeviceTreeNodeTest.cs" />
+    <Compile Include="Drivers\DriverTest.cs" />
+    <Compile Include="Entities\CachedUserDataTest.cs" />
+    <Compile Include="Entities\CachedComputerDataTest.cs" />
+    <Compile Include="Entities\Implementations\DomainSnapshotTest.cs" />
+    <Compile Include="Entities\Management\AccountSecurityIdentifierSetTest.cs" />
+    <Compile Include="EnumGeneratedTests.cs" />
+    <Compile Include="Network\MailslotTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyObjectTestsGenerated.cs" />
+    <Compile Include="RecognizedSignaturesTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.AdminView.Desktop\LeakBlocker.AdminView.Desktop.csproj">
+      <Project>{a3a47afa-2144-475e-bc79-6facb3d8f6bd}</Project>
+      <Name>LeakBlocker.AdminView.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.AdminView\LeakBlocker.AdminView.csproj">
+      <Project>{3acc9819-ad7b-4b2e-9fda-b84e1a381455}</Project>
+      <Name>LeakBlocker.AdminView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Agent.Core\LeakBlocker.Agent.Core.csproj">
+      <Project>{b7dcd030-ca24-4126-b87c-469e4bad9203}</Project>
+      <Name>LeakBlocker.Agent.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Agent\LeakBlocker.Agent.csproj">
+      <Project>{596196c8-5429-445a-bd08-e79bf4a28ae9}</Project>
+      <Name>LeakBlocker.Agent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Installer\LeakBlocker.Installer.csproj">
+      <Project>{e403e89f-8924-4f06-8a72-53eb5723b506}</Project>
+      <Name>LeakBlocker.Installer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.CleanupTool\LeakBlocker.Libraries.CleanupTool.csproj">
+      <Project>{ead6bfcf-8639-45ca-aeec-4d4cf490d25a}</Project>
+      <Name>LeakBlocker.Libraries.CleanupTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common.Tests\LeakBlocker.Libraries.Common.Tests.csproj">
+      <Project>{594980EA-78D2-42C8-B785-5EAE311D4377}</Project>
+      <Name>LeakBlocker.Libraries.Common.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Storage.Tests\LeakBlocker.Libraries.Storage.Tests.csproj">
+      <Project>{67ca34be-2b6e-43b7-9c61-14171c2ed815}</Project>
+      <Name>LeakBlocker.Libraries.Storage.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Storage\LeakBlocker.Libraries.Storage.csproj">
+      <Project>{0074249a-9fb0-4242-a942-9682d7fe8e7f}</Project>
+      <Name>LeakBlocker.Libraries.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.SystemTools\LeakBlocker.Libraries.SystemTools.csproj">
+      <Project>{b60c50fa-27c2-4396-8863-77d59ca7323c}</Project>
+      <Name>LeakBlocker.Libraries.SystemTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Internal\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

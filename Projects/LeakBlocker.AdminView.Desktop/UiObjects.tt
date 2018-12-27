@@ -1,0 +1,32 @@
+﻿<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new FactoryDeclaration( "IStatusTools", "StatusToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IAccountTools", "AccountToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IAgentInstallationTools", "AgentInstallationToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IDeviceTools", "DeviceToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IConfigurationTools", "ConfigurationToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IAuditTools", "AuditToolsClient", isInternal:true ),
+    new FactoryDeclaration( "IReportTools", "ReportToolsClient", isInternal:true ),
+    new FactoryDeclaration( "ILicenseTools", "LicenseToolsClient", isInternal:true ),
+    new FactoryDeclaration( "ILocalKeyAgreement", "LocalKeyAgreementClient", isInternal:true ),
+    new FactoryDeclaration( "IAgentSetupPasswordTools", "AgentSetupPasswordToolsClient", isInternal:true ),
+    new SingletonDeclaration( "IDomainCache", "DomainCache", isInternal:true ),
+    new SingletonDeclaration( "IUiConfigurationManager", "UiConfigurationManager", isInternal:true ),
+    new SingletonDeclaration( "ScopeToImageConverter", "ScopeToImageConverter", isInternal:true ),
+    new SingletonDeclaration( "DeviceToImageConverter", "DeviceToImageConverter", isInternal:true ),
+    new SingletonDeclaration( "IAdminKeyStorage", "AdminKeyStorage", isInternal:true ),
+};
+
+#>
+
+using LeakBlocker.AdminView.Desktop.Common;
+using LeakBlocker.AdminView.Desktop.Controls.Common.Converters;
+using LeakBlocker.AdminView.Desktop.Controls.Standard.Audit;
+using LeakBlocker.AdminView.Desktop.Network;
+using LeakBlocker.Libraries.Common.CommonInterfaces;
+using LeakBlocker.ServerShared.AdminViewCommunication;
+using LeakBlocker.ServerShared.AdminViewCommunication.KeysAgreement;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

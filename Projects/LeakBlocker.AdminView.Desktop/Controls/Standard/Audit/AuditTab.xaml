@@ -1,0 +1,24 @@
+﻿<TabItem x:Class="LeakBlocker.AdminView.Desktop.Controls.Standard.Audit.AuditTab"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+         xmlns:resources2="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+         xmlns:animations="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Animations"
+         x:ClassModifier="internal"
+         Background="{x:Static SystemColors.ControlLightBrush}"
+         Style="{StaticResource TabItemStyle}"
+         Header="{x:Static resources2:AdminViewResources.Audit}">
+    <Grid>
+        <animations:BusyIndicator  x:Name="busyIndicator" IsBusy="True"/>
+        <common:DynamicTabControl x:Name="filters" x:FieldModifier="private"/>
+        <TextBlock 
+            Name="noItemsText"
+            x:FieldModifier="private"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Foreground="DarkGray"
+            Panel.ZIndex="1"
+            Text="{x:Static resources2:AdminViewResources.NoAuditFiltersText}"/>
+    </Grid>
+
+</TabItem>

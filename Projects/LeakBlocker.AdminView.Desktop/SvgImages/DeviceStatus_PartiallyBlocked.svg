@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg1307" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" inkscape:export-xdpi="90" inkscape:export-ydpi="90" inkscape:export-filename="/home/lapo/Desktop/Grafica/Icone/media-actions-outlines.png" sodipodi:version="0.32" sodipodi:docname="media-record.svg" inkscape:version="0.46" sodipodi:docbase="/home/jimmac/src/cvs/tango-icon-theme/scalable/actions" inkscape:output_extension="org.inkscape.output.svg.inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<radialGradient id="SVGID_1_" cx="35.2959" cy="34.3838" r="46.2463" gradientTransform="matrix(-0.866 -0.5 -0.5 0.866 57.4111 14.578)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#73D216"/>
+	<stop  offset="1" style="stop-color:#4E9A06"/>
+</radialGradient>
+<path fill="url(#SVGID_1_)" stroke="#3A7304" stroke-width="1.0757" stroke-linecap="square" stroke-linejoin="round" d="
+	M12.837,42.598L34.49,5.099C24.179-0.73,11.07,2.843,5.123,13.143C-0.824,23.443,2.636,36.584,12.837,42.598z"/>
+<defs>
+	
+	
+		<inkscape:perspective  inkscape:vp_y="0 : 1000 : 0" id="perspective47" inkscape:vp_z="48 : 24 : 1" inkscape:vp_x="0 : 24 : 1" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="24 : 16 : 1">
+		</inkscape:perspective>
+</defs>
+<radialGradient id="SVGID_2_" cx="13.0957" cy="15.4219" r="35.0154" gradientTransform="matrix(-0.866 -0.5 -0.5 0.866 57.4111 14.578)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#EF2929"/>
+	<stop  offset="1" style="stop-color:#CC0000"/>
+</radialGradient>
+<path fill="url(#SVGID_2_)" stroke="#CC0000" stroke-width="1.0757" stroke-linecap="square" stroke-linejoin="round" d="
+	M13.349,42.893c0.059,0.034,0.113,0.074,0.172,0.106c10.336,5.968,23.565,2.408,29.543-7.949c5.982-10.359,2.451-23.591-7.887-29.56
+	C35.119,5.456,35.059,5.428,35,5.395L13.349,42.893z"/>
+<sodipodi:namedview  stroke="#ef2929" fill="#ef2929" guidetolerance="1px" showguides="false" showborder="true" inkscape:zoom="1" inkscape:cy="34.59508" inkscape:cx="-125.50077" bordercolor="#666666" pagecolor="#ffffff" id="base" borderopacity="0.11372549" showgrid="false" inkscape:window-y="160" inkscape:window-x="494" inkscape:window-height="688" inkscape:window-width="872" inkscape:showpageshadow="false" inkscape:document-units="px" inkscape:grid-bbox="true" inkscape:current-layer="layer1" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:guide-bbox="true" inkscape:grid-points="true">
+	<sodipodi:guide  position="38.996647" orientation="horizontal" id="guide2194"></sodipodi:guide>
+	<sodipodi:guide  position="9.0140845" orientation="horizontal" id="guide2196"></sodipodi:guide>
+	<sodipodi:guide  position="9.0140845" orientation="vertical" id="guide2198"></sodipodi:guide>
+	<sodipodi:guide  position="38.975184" orientation="vertical" id="guide2200"></sodipodi:guide>
+	<sodipodi:guide  position="22.988281" orientation="horizontal" id="guide2202"></sodipodi:guide>
+	<sodipodi:guide  position="23.908786" orientation="vertical" id="guide2204"></sodipodi:guide>
+	<sodipodi:guide  position="157.99417" orientation="vertical" id="guide4332"></sodipodi:guide>
+	<sodipodi:guide  position="-36.062446" orientation="horizontal" id="guide4334"></sodipodi:guide>
+	<sodipodi:guide  position="-58.02695" orientation="horizontal" id="guide4336"></sodipodi:guide>
+	<sodipodi:guide  position="180.00287" orientation="vertical" id="guide4338"></sodipodi:guide>
+	<sodipodi:guide  position="107.92217" orientation="vertical" id="guide4417"></sodipodi:guide>
+	<sodipodi:guide  position="129.93087" orientation="vertical" id="guide4419"></sodipodi:guide>
+	<sodipodi:guide  position="19.996875" orientation="horizontal" id="guide5106"></sodipodi:guide>
+	<sodipodi:guide  position="63.039674" orientation="horizontal" id="guide5119"></sodipodi:guide>
+	<sodipodi:guide  position="49.066305" orientation="horizontal" id="guide5121"></sodipodi:guide>
+	<sodipodi:guide  position="-86.007168" orientation="horizontal" id="guide5307"></sodipodi:guide>
+	<sodipodi:guide  position="-108.09009" orientation="horizontal" id="guide5309"></sodipodi:guide>
+	<sodipodi:guide  position="-100.15429" orientation="horizontal" id="guide3111"></sodipodi:guide>
+	
+		<inkscape:grid  color="#0000ff" empspacing="2" originy="0px" spacingx="0.5px" spacingy="0.5px" empopacity="0.4" empcolor="#0000ff" originx="0px" opacity="0.2" type="xygrid" id="GridFromPre046Settings">
+		</inkscape:grid>
+</sodipodi:namedview>
+<path id="path2527" sodipodi:ry="14" sodipodi:rx="14" sodipodi:cx="24" sodipodi:cy="24" sodipodi:type="arc" opacity="0.48" fill="none" stroke="#FFFFFF" stroke-width="1.2174" stroke-linecap="square" stroke-linejoin="round" enable-background="new    " d="
+	M43.652,24.099c0,10.956-8.885,19.838-19.837,19.838c-10.956,0-19.838-8.886-19.838-19.838c0-10.955,8.882-19.838,19.838-19.838
+	C34.771,4.261,43.652,13.142,43.652,24.099z"/>
+<radialGradient id="path2529_1_" cx="-1002.1567" cy="-462.8428" r="22.4234" gradientTransform="matrix(3.6588 0 0 -2.0808 3679.8506 -969.7697)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</radialGradient>
+<path id="path2529" sodipodi:nodetypes="cccsc" opacity="0.6" fill="url(#path2529_1_)" enable-background="new    " d="
+	M23.545,3.398C12.713,3.536,3.873,12.01,3.168,22.696c10.554,4.34,23.926-2.503,39.921-5.833C41.9,12.122,35.232,3.398,23.816,3.398
+	C23.726,3.398,23.634,3.397,23.545,3.398z"/>
+</svg>

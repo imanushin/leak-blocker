@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg1306" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" sodipodi:version="0.32" sodipodi:docname="dialog-error.svg" inkscape:version="0.46" sodipodi:docbase="/home/garrett/Source/tango-icon-theme/scalable/status" inkscape:output_extension="org.inkscape.output.svg.inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  inkscape:vp_x="0 : 24 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="48 : 24 : 1" id="perspective40" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="24 : 16 : 1">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  fill="#ef2929" inkscape:cx="-134.9567" inkscape:cy="20.463852" inkscape:zoom="1" showgrid="true" borderopacity="0.21568627" pagecolor="#ffffff" bordercolor="#666666" id="base" inkscape:window-y="30" inkscape:window-x="234" inkscape:window-height="818" inkscape:window-width="925" inkscape:showpageshadow="false" inkscape:document-units="px" inkscape:grid-bbox="true" inkscape:current-layer="layer2" inkscape:pageshadow="2" inkscape:pageopacity="0.0">
+	
+		<inkscape:grid  color="#0000ff" empopacity="0.4" spacingx="1px" empspacing="4" spacingy="1px" opacity="0.2" empcolor="#0000ff" type="xygrid" originx="0px" originy="0px" id="GridFromPre046Settings">
+		</inkscape:grid>
+</sodipodi:namedview>
+<g>
+	<path id="rect5057" fill="#166496" d="M27.229,2.101l18.73,18.706c1.715,1.712,1.715,4.491,0,6.203l-18.73,18.707
+		c-1.715,1.711-4.496,1.711-6.211,0L2.286,27.01c-1.715-1.711-1.715-4.49,0-6.203L21.017,2.101
+		C22.732,0.387,25.513,0.387,27.229,2.101z"/>
+	
+		<linearGradient id="rect5059_1_" gradientUnits="userSpaceOnUse" x1="764.8848" y1="-39.937" x2="817.0165" y2="-40.6512" gradientTransform="matrix(0.7071 0.7071 -0.7071 0.7071 -563.9166 -507.1375)">
+		<stop  offset="0" style="stop-color:#1C97E1"/>
+		<stop  offset="1" style="stop-color:#006798"/>
+	</linearGradient>
+	<path id="rect5059" fill="url(#rect5059_1_)" stroke="#FFFFFF" stroke-width="1.1875" d="M25.677,3.303l19.081,19.055
+		c0.855,0.856,0.855,2.244,0,3.104L25.677,44.515c-0.859,0.856-2.25,0.856-3.107,0L3.49,25.462c-0.858-0.859-0.858-2.247,0-3.104
+		l19.08-19.055C23.428,2.447,24.818,2.447,25.677,3.303z"/>
+	
+		<linearGradient id="text5067_1_" gradientUnits="userSpaceOnUse" x1="972.9609" y1="585.1387" x2="987.285" y2="600.3633" gradientTransform="matrix(0.6386 0 0 1.5659 -602.5359 -903.8848)">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.7266"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path id="text5067" fill="url(#text5067_1_)" d="M26.402,18.225h-1.184c-2.123,0.383-3.271,0.557-5.116,0.695v1.043l0.695,0.069
+		c1.81,0.173,2.297,0.8,2.297,2.886v8.166c0,1.913-0.626,2.712-2.158,2.887l-0.87,0.07v1.041h9.327v-1.041l-0.834-0.07
+		c-1.566-0.175-2.159-0.974-2.159-2.887V18.225 M24.801,12.351c-1.184,0-2.124,0.938-2.124,2.085c0,1.183,0.939,2.12,2.088,2.12
+		c1.184,0,2.123-0.938,2.123-2.086C26.889,13.324,25.949,12.351,24.801,12.351"/>
+	
+		<linearGradient id="rect5098_1_" gradientUnits="userSpaceOnUse" x1="404.3604" y1="903.0439" x2="422.3114" y2="930.4257" gradientTransform="matrix(1 0 0 1 -399.0127 -905.2402)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</linearGradient>
+	<path id="rect5098" fill="url(#rect5098_1_)" d="M24.12,2.654c-0.562,0-1.126,0.211-1.557,0.64L3.483,22.35
+		c-0.86,0.86-0.86,2.248,0,3.108l12.195,12.178c0.031-12.696,8.597-23.078,19.628-24.722l-9.629-9.62
+		C25.244,2.866,24.682,2.654,24.12,2.654z"/>
+</g>
+</svg>

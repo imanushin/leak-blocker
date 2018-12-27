@@ -1,0 +1,73 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Standard.Audit.EntitySubList"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+                xmlns:generated="clr-namespace:LeakBlocker.AdminView.Desktop.Generated"
+                xmlns:resources2="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+                x:ClassModifier="internal"
+                x:Name="entitySubList"
+                HorizontalAlignment="Stretch" 
+                HorizontalContentAlignment="Stretch"
+                Margin="3">
+    <ContentControl.Resources>
+        <DataTemplate x:Key="StretchedHeaderTemplate">
+            <Border Loaded="OnStretchedHeaderTemplateLoaded"
+                    HorizontalAlignment="Stretch">
+                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Stretch"/>
+            </Border>
+        </DataTemplate>
+
+        <ContextMenu x:Key="RemoveContextMenu">
+            <MenuItem Header="{x:Static resources2:AdminViewResources.Remove}" Click="RemoveSelected">
+                <MenuItem.Icon>
+                    <generated:ContextMenuUndo/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </ContentControl.Resources>
+    <Expander Name="expander"
+              Expanded="OnExpanded"
+              HorizontalAlignment="Stretch"
+              HorizontalContentAlignment="Stretch"
+              HeaderTemplate="{StaticResource StretchedHeaderTemplate}" 
+              x:FieldModifier="private">
+        <Expander.Header>
+            <layouts:SmartGrid HorizontalAlignment="Stretch" Columns="Auto,*,Auto">
+                <ContentControl Name="imageContainer" x:FieldModifier="private" Height="16" Width="16" Margin="0,0,3,0"/>
+                <TextBlock Grid.Column="1" Name="headerText" x:FieldModifier="private" />
+                <Button Grid.Column="2" Style="{StaticResource TranspatentButtonStyle}" HorizontalAlignment="Right" Height="16" Width="16" Margin="0,0,2,0" Click="AddClickedHandler">
+                    <generated:ButtonAdd/>
+                </Button>
+            </layouts:SmartGrid>
+        </Expander.Header>
+        <ListView x:Name="items" 
+                  x:FieldModifier="private" 
+                  HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Stretch"
+                  Margin="0,1,0,0"
+                  KeyUp="ItemsKeyUp">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="0,0,1,0"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <layouts:SmartGrid Columns="*,Auto" HorizontalAlignment="Stretch" ContextMenu="{StaticResource RemoveContextMenu}" >
+                        <TextBlock Grid.Column="0" Text="{Binding}"/>
+                        <Button
+                            Style="{StaticResource TranspatentButtonStyle}"
+                            Grid.Column="1" 
+                            Click="RemoveButtonClicked" 
+                            Tag="{Binding}" 
+                            HorizontalAlignment="Right"
+                            Width="16" 
+                            Height="16">
+                            <generated:ButtonRemove/>
+                        </Button>
+                    </layouts:SmartGrid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Expander>
+</ContentControl>

@@ -1,0 +1,39 @@
+﻿
+<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "IAgentStatusStore", "AgentStatusStore", isInternal:true ),
+    new SingletonDeclaration( "IAgentStatusObserver", "AgentStatusObserver", isInternal:true ),
+    new SingletonDeclaration( "IAuditItemHelper", "AuditItemHelper", isInternal:true ),
+    new SingletonDeclaration( "IAgentManager", "AgentManager", isInternal:true ),
+    new SingletonDeclaration( "IScopeManager", "ScopeManager", isInternal:true ),
+    new SingletonDeclaration( "IReportMailer", "ReportMailer", isInternal:true ),
+    new SingletonDeclaration( "ILicenseStorage", "LicenseStorage", isInternal:true ),
+    new SingletonDeclaration( "IReportConfigurationStorage", "ReportConfigurationStorage", isInternal:true ),
+    new SingletonDeclaration( "ISecurityObjectCache", "SecurityObjectCache", isInternal:true ), 
+    new SingletonDeclaration( "IAgentKeyManager", "AgentKeyManager", isInternal:true ), 
+    new SingletonDeclaration( "IAgentNetworkSession", "AgentSessionManager", isInternal:true ), 
+    new SingletonDeclaration( "IAgentNetworkSession", "AgentInstallationSecuritySessionManager", isInternal:true, propertyName:"AgentInstallationSecuritySessionManager" ), 
+    new SingletonDeclaration( "IAdminViewWcfSession", "AdminViewSecuritySessionManager", isInternal:true ), 
+    new SingletonDeclaration( "IConfigurationStorage", "ConfigurationStorage", isInternal:true ),
+    new SingletonDeclaration( "IAdminKeysStorage", "AdminKeysStorage", isInternal:true ),
+    new SingletonDeclaration( "IAgentSetupPasswordManager", "AgentSetupPasswordManager", isInternal:true ),    
+    new SingletonDeclaration( "IMailer", "Mailer", isInternal:true ),    
+    new SingletonDeclaration( "IAccountResolver", "AccountResolver", isInternal:true ),    
+    new SingletonDeclaration( "IAgentInstaller", "AgentInstaller", isInternal:true ),    
+    new SingletonDeclaration( "IAgentsSetupListStorage", "AgentsSetupListStorage", isInternal:true ),    
+};
+ 
+#>
+
+using LeakBlocker.Libraries.Common.Network;
+using LeakBlocker.Server.Service.InternalTools;
+using LeakBlocker.Server.Service.InternalTools.AdminUsersStorage;
+using LeakBlocker.Server.Service.InternalTools.LocalStorages;
+using LeakBlocker.Server.Service.InternalTools.SingletonImplementation;
+using LeakBlocker.Server.Service.InternalTools.SingletonImplementation.LocalStorages;
+using LeakBlocker.Server.Service.Network.AdminView;
+using LeakBlocker.Server.Service.Network.Agent;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

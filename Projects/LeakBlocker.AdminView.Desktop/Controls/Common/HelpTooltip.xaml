@@ -1,0 +1,6 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.HelpTooltip"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                Style="{StaticResource ContentControlStyle}"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:ClassModifier="internal">
+    <TextBlock Margin="5,0,0,0" Name="text" x:FieldModifier="private"/>
+</ContentControl>

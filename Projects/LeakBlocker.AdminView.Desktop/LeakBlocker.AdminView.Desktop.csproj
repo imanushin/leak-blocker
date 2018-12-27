@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3A47AFA-2144-475E-BC79-6FACB3D8F6BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.AdminView.Desktop</RootNamespace>
+    <AssemblyName>LeakBlocker.AdminView.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Binaries\LeakBlocker.AdminView.Desktop.xml</DocumentationFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Binaries\LeakBlocker.AdminView.Desktop.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LeakBlocker.AdminView.Desktop.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\CommonProperties\ApplicationIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>..\CommonProperties\DefaultPrivileges.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\WPF Toolkit\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\WPF Toolkit\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="..\LeakBlocker.AdminView\LoadingStatus.cs">
+      <Link>LoadingStatus.cs</Link>
+    </Compile>
+    <Compile Include="Controls\Common\Animations\WaitIndicatorText.xaml.cs">
+      <DependentUpon>WaitIndicatorText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Buttons\TextAndImageButton.xaml.cs">
+      <DependentUpon>TextAndImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Converters\AuditItemTypeToImageTemplateConverter.cs" />
+    <Compile Include="Controls\Common\Converters\ManagedComputerViewsToStatistic.cs" />
+    <Compile Include="Controls\Standard\Audit\AuditDataGrid.xaml.cs">
+      <DependentUpon>AuditDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\AuditMenuItem.xaml.cs">
+      <DependentUpon>AuditMenuItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Network\AgentInstallationToolsClient.cs" />
+    <Compile Include="Themes\LittleStyles.xaml.cs">
+      <DependentUpon>LittleStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Collections\CollectionContainer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CollectionContainer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Collections\ComputersCollection.cs" />
+    <Compile Include="Common\Collections\AvailableUserScopesCollection.cs" />
+    <Compile Include="Common\Collections\AuditDevicesCollection.cs" />
+    <Compile Include="Common\Collections\UsersCollection.cs" />
+    <Compile Include="Common\Collections\FilteredCollection.cs" />
+    <Compile Include="Common\Collections\IChangingEnumerable.cs" />
+    <Compile Include="Common\Collections\AvailableComputerScopesCollection.cs" />
+    <Compile Include="Common\Collections\ScopeCollection.cs" />
+    <Compile Include="Common\Collections\ServerDevices.cs" />
+    <Compile Include="Common\Collections\SortedObservableCollection.cs" />
+    <Compile Include="Common\IUiConfigurationManager.cs" />
+    <Compile Include="Common\UiConfigurationManager.cs" />
+    <Compile Include="Common\DomainCache.cs" />
+    <Compile Include="Common\IDomainCache.cs" />
+    <Compile Include="Common\UiComputer.cs" />
+    <Compile Include="Controls\Common\AccountWindows\AskAndUpdateCredentialsWindow.xaml.cs">
+      <DependentUpon>AskAndUpdateCredentialsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\AccountWindows\WaitScopeDataRetrieving.xaml.cs">
+      <DependentUpon>WaitScopeDataRetrieving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\AutoComplete\HintControl.xaml.cs">
+      <DependentUpon>HintControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\AutoComplete\HintControlContainer.cs" />
+    <Compile Include="Controls\Common\Animations\BusyIndicator.xaml.cs">
+      <DependentUpon>BusyIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Buttons\CancelButton.cs" />
+    <Compile Include="Controls\Common\Buttons\LargeVectorImagedButton.xaml.cs">
+      <DependentUpon>LargeVectorImagedButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Buttons\OkButton.cs" />
+    <Compile Include="Controls\Common\Buttons\RefreshButton.cs" />
+    <Compile Include="Controls\Common\Buttons\SaveButton.cs" />
+    <Compile Include="Controls\Common\Converters\AbstractConverter.cs" />
+    <Compile Include="Controls\Common\Converters\AndConverter.cs" />
+    <Compile Include="Controls\Common\Converters\AuditItemToSeverityImageTypeConverter.cs" />
+    <Compile Include="Controls\Common\Converters\ManagedComputerStatusToImageConverter.cs" />
+    <Compile Include="Controls\Common\Converters\AttachedDeviceStateToImageConveter.cs" />
+    <Compile Include="Controls\Common\Converters\ManagedComputerStatusToStringConverter.cs" />
+    <Compile Include="Controls\Common\Converters\ManagedComputerViewToTextConverter.cs" />
+    <Compile Include="Controls\Common\DateTimePicker.xaml.cs">
+      <DependentUpon>DateTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\DynamicTabControl.xaml.cs">
+      <DependentUpon>DynamicTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Email\EmailSettingsControl.xaml.cs">
+      <DependentUpon>EmailSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Layouts\GridLengthCollection.cs" />
+    <Compile Include="Controls\Common\Layouts\GridLengthCollectionConverter.cs" />
+    <Compile Include="Controls\Common\ScopeSelections\AbstractScopeSelectionWindow.cs" />
+    <Compile Include="Controls\Common\ScopeSelections\ComputerSelectionWindow.cs" />
+    <Compile Include="Controls\Common\AbstractSelectionWindow.xaml.cs">
+      <DependentUpon>AbstractSelectionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ScopeSelections\UserSelectionWindow.cs" />
+    <Compile Include="Controls\Common\Converters\DeviceToImageConverter.cs" />
+    <Compile Include="Controls\Common\Converters\ScopeToImageConverter.cs" />
+    <Compile Include="Controls\Common\TextBoxes\BaseRestrictedTextBox.cs" />
+    <Compile Include="Controls\Common\TextBoxes\NumberRestrictedTextBox.cs" />
+    <Compile Include="Controls\Common\TextBoxes\TimeRestrictedTextBox.cs" />
+    <Compile Include="Controls\Common\UpDowns\NumericUpDown.xaml.cs">
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\UpDowns\UpDown.xaml.cs">
+      <DependentUpon>UpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ScopeSelections\ComputerScopeSelectionWindow.cs" />
+    <Compile Include="Controls\Common\Converters\ScopeTypeToStringConveter.cs" />
+    <Compile Include="Controls\Common\DualListView.cs" />
+    <Compile Include="Controls\Common\HelpTooltip.xaml.cs">
+      <DependentUpon>HelpTooltip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ItemsList.xaml.cs">
+      <DependentUpon>ItemsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ScopeSelections\UserScopeSelectionWindow.cs" />
+    <Compile Include="Controls\Common\AccountWindows\FindInOtherDomainWindow.xaml.cs">
+      <DependentUpon>FindInOtherDomainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\AutoComplete\HighlightedAutoCompleteBox.xaml.cs">
+      <DependentUpon>HighlightedAutoCompleteBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ComputerScopeList.xaml.cs">
+      <DependentUpon>ComputerScopeList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Layouts\SmartGrid.cs" />
+    <Compile Include="Controls\Common\Animations\WaitIndicatorControl.xaml.cs">
+      <DependentUpon>WaitIndicatorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordControl.xaml.cs">
+      <DependentUpon>AgentSetupPasswordControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordTab.xaml.cs">
+      <DependentUpon>AgentSetupPasswordTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordViewer.xaml.cs">
+      <DependentUpon>AgentSetupPasswordViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\AgentSetupPasswordControls\SendPasswordByEmailWindow.xaml.cs">
+      <DependentUpon>SendPasswordByEmailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\SettingsChangeActions\AddDeviceToWhiteList.cs" />
+    <Compile Include="Controls\Standard\SettingsChangeActions\AddUserToWhiteList.cs" />
+    <Compile Include="Controls\Standard\TemporaryAccess\TemporaryAccessSelectionWindow.xaml.cs">
+      <DependentUpon>TemporaryAccessSelectionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ToolWindow.cs" />
+    <Compile Include="Controls\Simple\AdvancedOptionsWindow.xaml.cs">
+      <DependentUpon>AdvancedOptionsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Email\KnownAccountSelector.xaml.cs">
+      <DependentUpon>KnownAccountSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Simple\ReportsTab.xaml.cs">
+      <DependentUpon>ReportsTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Email\UiEmailSettings.cs" />
+    <Compile Include="Controls\Standard\AboutDialog.xaml.cs">
+      <DependentUpon>AboutDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\AuditFilterTab.xaml.cs">
+      <DependentUpon>AuditFilterTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\AuditTab.xaml.cs">
+      <DependentUpon>AuditTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\DeviceSelectionWindow.cs" />
+    <Compile Include="Controls\Standard\Audit\EntitySubList.xaml.cs">
+      <DependentUpon>EntitySubList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\EnumSelector.xaml.cs">
+      <DependentUpon>EnumSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\IUiAuditManager.cs" />
+    <Compile Include="Controls\Standard\Audit\ListSelection.xaml.cs">
+      <DependentUpon>ListSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\Audit\UiAuditManager.cs" />
+    <Compile Include="Controls\Standard\SettingsChangeActions\CancelTemporaryAccessAction.cs" />
+    <Compile Include="Controls\Standard\TemporaryAccess\CancelAccessData.cs" />
+    <Compile Include="Controls\Standard\TemporaryAccess\CancelTemporaryAccessWindow.xaml.cs">
+      <DependentUpon>CancelTemporaryAccessWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\CurrentStatus.xaml.cs">
+      <DependentUpon>CurrentStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Simple\DevicesTab.xaml.cs">
+      <DependentUpon>DevicesTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Simple\SelectScopeSimple.xaml.cs">
+      <DependentUpon>SelectScopeSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Simple\UsersTab.xaml.cs">
+      <DependentUpon>UsersTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\License\RequestCodeDialog.xaml.cs">
+      <DependentUpon>RequestCodeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Standard\SettingsChangeActions\BaseChangeAction.cs" />
+    <Compile Include="Controls\Standard\SettingsChangeActions\ExcludeComputerAction.cs" />
+    <Compile Include="Controls\Standard\SettingsChangeActions\GetTemporaryAccessAction.cs" />
+    <Compile Include="Controls\Common\Converters\CancelTemporaryAccessConditionStringConverter.cs" />
+    <Compile Include="Controls\Standard\Views\DeviceView.cs" />
+    <Compile Include="Controls\Standard\Views\ManagedComputerView.cs" />
+    <Compile Include="Generated\ClientObjectsGenerated_LeakBlockerServerSharedAdminViewCommunication.cs" />
+    <Compile Include="Generated\ImageTypes.cs" />
+    <Compile Include="Generated\Shaders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shaders.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images\BaseGeneratedImage.xaml.cs">
+      <DependentUpon>BaseGeneratedImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InactivePictureEffect.cs" />
+    <Compile Include="Network\AdminKeyStorage.cs" />
+    <Compile Include="Network\AgentSetupPasswordToolsClient.cs" />
+    <Compile Include="Network\AuditToolsClient.cs" />
+    <Compile Include="Network\ConfigurationToolsClient.cs" />
+    <Compile Include="Network\IAdminKeyStorage.cs" />
+    <Compile Include="Network\LicenseToolsClient.cs" />
+    <Compile Include="Network\LocalConnectionHelper.cs" />
+    <Compile Include="Network\LocalKeyAgreementClient.cs" />
+    <Compile Include="Network\ReportToolsClient.cs" />
+    <Compile Include="Network\StatusToolsClient.cs" />
+    <Compile Include="Network\DeviceToolsClient.cs" />
+    <Compile Include="Resources\AdminViewResources.Designer.cs">
+      <DependentUpon>AdminViewResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UiObjects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UiObjects.tt</DependentUpon>
+    </Compile>
+    <Page Include="Controls\Common\Animations\WaitIndicatorText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Buttons\TextAndImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\AuditDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\AuditMenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\CommonColorsDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\LittleStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AccountWindows\AskAndUpdateCredentialsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AccountWindows\WaitScopeDataRetrieving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AutoComplete\HintControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Animations\BusyIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Buttons\LargeVectorImagedButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Common\Converters\ConvertersDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\DateTimePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AbstractSelectionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Common\DynamicTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Email\EmailSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\UpDowns\NumericUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\UpDowns\UpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AccountWindows\FindInOtherDomainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\HelpTooltip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\AutoComplete\HighlightedAutoCompleteBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ItemsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ComputerScopeList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Animations\WaitIndicatorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\AgentSetupPasswordControls\AgentSetupPasswordViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\AgentSetupPasswordControls\SendPasswordByEmailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\TemporaryAccess\TemporaryAccessSelectionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Simple\AdvancedOptionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\Email\KnownAccountSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Simple\ReportsTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\AboutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\AuditFilterTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\AuditTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\EntitySubList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\EnumSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\Audit\ListSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\TemporaryAccess\CancelTemporaryAccessWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\CurrentStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Simple\DevicesTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Simple\UsersTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Simple\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Simple\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Controls\Simple\SelectScopeSimple.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Standard\License\RequestCodeDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generated\SvgImageResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Images\BaseGeneratedImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\TabControlDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\TabItemDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Network\AccountToolsClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+    <None Include="Common\Collections\CollectionContainer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CollectionContainer.cs</LastGenOutput>
+    </None>
+    <None Include="UiObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UiObjects.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.ServerShared.AdminViewCommunication\LeakBlocker.ServerShared.AdminViewCommunication.csproj">
+      <Project>{4CF5C1BE-4C03-426A-A574-BEEA60A8B854}</Project>
+      <Name>LeakBlocker.ServerShared.AdminViewCommunication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CommonProperties\CodeAnalysisDictionary.xml">
+      <Link>Properties\CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Generated\Shaders.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Shaders.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminViewResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminViewResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\InactiveImage.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusesScreen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\TestsGenerator.exe" "$(ProjectDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\Signer.exe" "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\ImageGenerator.exe" "$(ProjectDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\fxc.exe" "$(ProjectDir)Shaders\InactiveImage.hlsl" /T ps_2_0 /Fo "$(ProjectDir)..\Binaries\InactiveImage.ps" 
+</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

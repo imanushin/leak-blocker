@@ -1,0 +1,28 @@
+﻿<common:ToolWindow x:Class="LeakBlocker.AdminView.Desktop.Controls.Standard.AboutDialog"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+                   xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+                   xmlns:resources="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+                   xmlns:resources2="clr-namespace:LeakBlocker.Libraries.Common.Resources;assembly=LeakBlocker.Libraries.Common"
+                   xmlns:animations="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Animations"
+                   x:ClassModifier="internal"
+                   RestrictWidth="Both"
+                   Title="{x:Static resources:AdminViewResources.About}">
+    <layouts:SmartGrid Rows="Auto,Auto,Auto,Auto" Width="400">
+        <TextBlock Text="{x:Static resources2:CommonStrings.ProductName}" Grid.Row="0" FontSize="36" Margin="10"/>
+
+        <Border BorderBrush="Black" BorderThickness="2" Height="2" Grid.Row="1" />
+
+        <TextBlock Text="{x:Static resources:AdminViewResources.ProductDescription}" Grid.Row="2" TextWrapping="Wrap" Margin="10"/>
+
+        <layouts:SmartGrid Grid.Row="3" Columns="Auto,*,Auto,Auto">
+            <TextBlock Grid.Column="0" Name="licenseData" x:FieldModifier="private" Text="{x:Static resources:AdminViewResources.RetrievingLicenseData}" Margin="10"/>
+            <Button Grid.Column="2" Height="25" Width="75" Content="{x:Static resources:AdminViewResources.Buy}" Click="BuyHandler" ToolTip="{x:Static resources:AdminViewResources.BuyAdditionalLicenses}" Margin="5"/>
+            <Button Grid.Column="3" Height="25" Width="75" Content="{x:Static resources:AdminViewResources.EnterCode}" Click="EnterCodeHandler" ToolTip="{x:Static resources:AdminViewResources.EnterLicenseCode}" Margin="5"/>
+        </layouts:SmartGrid>
+
+        <animations:BusyIndicator x:Name="busyIndicator" x:FieldModifier="private" Grid.RowSpan="3"/>
+
+    </layouts:SmartGrid>
+</common:ToolWindow>

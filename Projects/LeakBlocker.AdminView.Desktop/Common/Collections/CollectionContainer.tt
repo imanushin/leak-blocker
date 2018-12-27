@@ -1,0 +1,17 @@
+﻿<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "ComputersCollection", "ComputersCollection", propertyName:"AvailableComputers", isInternal:true ),
+    new SingletonDeclaration( "UsersCollection", "UsersCollection", propertyName:"AvailableUsers", isInternal:true ),
+    new SingletonDeclaration( "AvailableUserScopesCollection", "AvailableUserScopesCollection", propertyName:"AvailableUserScopes", isInternal:true ),
+    new SingletonDeclaration( "AvailableComputerScopesCollection", "AvailableComputerScopesCollection", propertyName:"AvailableComputerScopes", isInternal:true ),
+    new SingletonDeclaration( "ServerDevices", "ServerDevices", isInternal:true ),
+    new SingletonDeclaration( "AuditDevicesCollection", "AuditDevicesCollection", isInternal:true ),
+};
+
+#>
+
+using LeakBlocker.AdminView.Desktop.Common.Collections;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

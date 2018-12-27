@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg11300" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" sodipodi:version="0.32" sodipodi:docname="go-jump.svg" inkscape:version="0.46" sodipodi:docbase="/home/tigert/cvs/freedesktop.org/tango-icon-theme/scalable/actions" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:export-ydpi="90.000000" inkscape:export-xdpi="90.000000" inkscape:export-filename="/home/jimmac/Desktop/wi-fi.png"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  inkscape:vp_x="0 : 24 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="48 : 24 : 1" id="perspective26" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="24 : 16 : 1">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  stroke="#8ae234" fill="#8ae234" inkscape:cx="30.109761" inkscape:cy="46.696516" inkscape:zoom="4" showgrid="false" borderopacity="0.25490196" pagecolor="#ffffff" bordercolor="#666666" id="base" inkscape:window-y="160" inkscape:window-x="0" inkscape:window-height="688" inkscape:window-width="872" inkscape:showpageshadow="false" inkscape:document-units="px" inkscape:grid-bbox="true" inkscape:current-layer="layer1" inkscape:pageshadow="2" inkscape:pageopacity="0.0">
+	</sodipodi:namedview>
+<linearGradient id="path1432_1_" gradientUnits="userSpaceOnUse" x1="-543.377" y1="655.8408" x2="-546.1769" y2="651.3638" gradientTransform="matrix(-1.1719 0 0 1.1719 -605.6477 -744.4167)">
+	<stop  offset="0" style="stop-color:#EF2929"/>
+	<stop  offset="1" style="stop-color:#CC0000"/>
+</linearGradient>
+<linearGradient id="path1432_2_" gradientUnits="userSpaceOnUse" x1="-548.8525" y1="776.9746" x2="-555.2713" y2="782.5911" gradientTransform="matrix(-1 0 0 1 -513.5352 -743)">
+	<stop  offset="0" style="stop-color:#CC0000"/>
+	<stop  offset="1" style="stop-color:#CC0000;stop-opacity:0"/>
+</linearGradient>
+<path id="path1432" sodipodi:nodetypes="ccccccc" fill="url(#path1432_1_)" stroke="url(#path1432_2_)" d="M23.892,27.789h10.393
+	L17.908,40.263L2.16,27.789h10.078C10.978,5.648,48.634-1.437,47.213,41.164C46.93,8.108,23.262,12.82,23.892,27.789z"/>
+<linearGradient id="path2177_1_" gradientUnits="userSpaceOnUse" x1="-538.4399" y1="659.2383" x2="-543.0964" y2="667.8175" gradientTransform="matrix(-1.1719 0 0 1.1719 -605.6477 -744.4167)">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path id="path2177" sodipodi:nodetypes="ccccccc" opacity="0.4176" fill="none" stroke="url(#path2177_1_)" enable-background="new    " d="
+	M22.384,28.586h8.472L17.363,38.791L4.327,28.586h8.389C10.313,5.2,47.329,0.488,47.434,39.658
+	C48.716,8.094,21.238,8.964,22.384,28.586z"/>
+</svg>

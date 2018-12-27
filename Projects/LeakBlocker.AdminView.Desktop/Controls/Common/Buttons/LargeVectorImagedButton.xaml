@@ -1,0 +1,19 @@
+﻿<Button x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.Buttons.LargeVectorImagedButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:ClassModifier="internal"
+        Width="32"
+        Height="32"
+        Margin="1,4,7,4">
+    <Viewbox
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch">
+        <ContentControl 
+            Margin="1"
+            Name="imageContainer"
+            VerticalContentAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            x:FieldModifier="private" />
+    </Viewbox>
+
+</Button>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CF5C1BE-4C03-426A-A574-BEEA60A8B854}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.ServerShared.AdminViewCommunication</RootNamespace>
+    <AssemblyName>LeakBlocker.ServerShared.AdminViewCommunication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.ServerShared.AdminViewCommunication.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.ServerShared.AdminViewCommunication.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="AgentSetupPassword.cs" />
+    <Compile Include="DomainUpdateRequest.cs" />
+    <Compile Include="EmailSettings.cs" />
+    <Compile Include="IAgentInstallationTools.cs" />
+    <Compile Include="IAgentSetupPasswordTools.cs" />
+    <Compile Include="IAuditTools.cs" />
+    <Compile Include="DomainCredentials.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAccountTools.cs" />
+    <Compile Include="IConfigurationTools.cs" />
+    <Compile Include="IDeviceTools.cs" />
+    <Compile Include="ILicenseTools.cs" />
+    <Compile Include="IReportTools.cs" />
+    <Compile Include="IStatusTools.cs" />
+    <Compile Include="KeysAgreement\ILocalKeyAgreement.cs" />
+    <Compile Include="KeysAgreement\ILocalKeysAgreementHelper.cs" />
+    <Compile Include="KeysAgreement\LocalKeysAgreementHelper.cs" />
+    <Compile Include="ManagedComputerData.cs" />
+    <Compile Include="ManagedComputerStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportConfiguration.cs" />
+    <Compile Include="ResultComputer.cs" />
+    <Compile Include="Scope.cs" />
+    <Compile Include="ScopeType.cs" />
+    <Compile Include="ManagedComputer.cs" />
+    <Compile Include="AdminViewCommunicationObjects.cs">
+      <DependentUpon>AdminViewCommunicationObjects.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SimpleConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CommonProperties\CodeAnalysisDictionary.xml">
+      <Link>Properties\CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdminViewCommunicationObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdminViewCommunicationObjects.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\TestsGenerator.exe" "$(ProjectDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\TcpGenerator.exe" "$(TargetPath)" "$(SolutionDir)\LeakBlocker.Server.Service" "$(SolutionDir)\LeakBlocker.AdminView.Desktop"
+
+"$(ProjectDir)..\..\InternalTools\Binaries\Signer.exe" "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

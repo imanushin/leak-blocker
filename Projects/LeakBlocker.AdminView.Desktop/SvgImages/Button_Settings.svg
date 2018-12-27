@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg11300" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" sodipodi:version="0.32" sodipodi:docname="preferences-system.svg" inkscape:version="0.46" sodipodi:docbase="/home/jimmac/src/cvs/tango-icon-theme/scalable/categories" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:export-ydpi="90.000000" inkscape:export-xdpi="90.000000" inkscape:export-filename="/home/jimmac/Desktop/wi-fi.png"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
+	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  inkscape:vp_x="0 : 24 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="48 : 24 : 1" id="perspective60" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="24 : 16 : 1">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  stroke="#204a87" fill="#3465a4" inkscape:cx="19.425317" inkscape:cy="26.37487" inkscape:zoom="4" showgrid="false" borderopacity="0.25490196" pagecolor="#ffffff" bordercolor="#666666" id="base" inkscape:window-y="30" inkscape:window-x="400" inkscape:window-height="818" inkscape:window-width="1034" inkscape:showpageshadow="false" inkscape:document-units="px" inkscape:grid-bbox="true" inkscape:current-layer="layer1" inkscape:pageshadow="2" inkscape:pageopacity="0.0">
+	</sodipodi:namedview>
+<linearGradient id="path2140_1_" gradientUnits="userSpaceOnUse" x1="63.6006" y1="-46.6567" x2="64.7309" y2="-5.8581" gradientTransform="matrix(0.8783 0 0 -0.8783 -31.7299 2.7808)">
+	<stop  offset="0" style="stop-color:#B6B6B6"/>
+	<stop  offset="0.5" style="stop-color:#F2F2F2"/>
+	<stop  offset="0.6761" style="stop-color:#FAFAFA"/>
+	<stop  offset="0.8405" style="stop-color:#D8D8D8"/>
+	<stop  offset="0.875" style="stop-color:#F2F2F2"/>
+	<stop  offset="1" style="stop-color:#DBDBDB"/>
+</linearGradient>
+<path id="path2140" sodipodi:nodetypes="cczcccccccccsc" fill="url(#path2140_1_)" stroke="#888A85" stroke-width="1" d="
+	M16.908,19.627L38.75,41.973c0.884,1.01,3.685,1.791,5.556,0c1.806-1.729,1.388-4.166-0.38-5.934L22.968,13.566
+	c2.587-7.188-2.649-13.225-9.405-11.931L12.11,2.961l4.545,4.293l0.253,3.787l-3.394,3.098l-4.056-0.446L5.293,9.778l-1.461,1.443
+	C3.153,17.71,9.937,23.508,16.908,19.627z"/>
+<path id="path3057" sodipodi:nodetypes="cczccccccccccc" opacity="0.4261" fill="none" stroke="#FFFFFF" stroke-width="1" enable-background="new    " d="
+	M17.15,18.159l22.083,23.032c0.685,0.781,2.853,1.386,4.301,0c1.397-1.339,1.074-3.226-0.294-4.595L21.976,14.033
+	C23.7,6.559,19.838,2.528,14.088,2.672l-0.311,0.314l4.144,3.722l0.149,4.809l-4.156,3.794l-4.879-0.527l-3.652-3.44l-0.406,0.495
+	C4.617,18.702,12.442,21.825,17.15,18.159z"/>
+<linearGradient id="rect3059_1_" gradientUnits="userSpaceOnUse" x1="296.8301" y1="359.2334" x2="268.3749" y2="359.9977" gradientTransform="matrix(0.613 0.629 0.629 -0.613 -370.8957 68.2829)">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path id="rect3059" opacity="0.1705" fill="none" stroke="url(#rect3059_1_)" stroke-width="1" enable-background="new    " d="
+	M21.804,17.067l17.257,17.708c0.391,0.402,0.384,1.046-0.018,1.438l-0.238,0.23c-0.402,0.392-1.045,0.384-1.438-0.019L20.111,18.718
+	c-0.393-0.402-0.384-1.046,0.019-1.438l0.236-0.231C20.769,16.657,21.412,16.666,21.804,17.067z"/>
+<linearGradient id="path2144_1_" gradientUnits="userSpaceOnUse" x1="73.4932" y1="-14.2285" x2="72.6971" y2="-6.2089" gradientTransform="matrix(0.8783 0 0 -0.8783 -31.4193 3.4019)">
+	<stop  offset="0" style="stop-color:#98A0A9"/>
+	<stop  offset="1" style="stop-color:#C3D0DD"/>
+</linearGradient>
+<path id="path2144" sodipodi:nodetypes="ccccccccc" fill="url(#path2144_1_)" stroke="#878F9D" stroke-width="1" d="M22.189,29.872
+	c0.958-0.821,15.276-15.466,15.276-15.466L41,14.154l5.556-7.701L41.927,2.33l-7.195,6.187v3.535L20.086,27.265
+	C19.392,27.958,21.306,30.63,22.189,29.872z"/>
+<linearGradient id="path3085_1_" gradientUnits="userSpaceOnUse" x1="31.8262" y1="31.3096" x2="42.9099" y2="42.9461" gradientTransform="matrix(1 0 0 -1 0 49)">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path id="path3085" sodipodi:nodetypes="ccccccccc" opacity="0.5398" fill="none" stroke="url(#path3085_1_)" stroke-width="1" enable-background="new    " d="
+	M22.077,28.677c0.744-0.638,14.978-15.215,14.978-15.215l3.369-0.285l4.845-6.512l-3.321-2.931L35.648,9.16l0.178,3.277
+	L21.249,27.725C20.711,28.264,21.392,29.265,22.077,28.677z"/>
+<linearGradient id="path2142_1_" gradientUnits="userSpaceOnUse" x1="48.2451" y1="-33.2534" x2="56.4854" y2="-41.4873" gradientTransform="matrix(0.8783 0 0 -0.8783 -31.7299 2.7808)">
+	<stop  offset="0" style="stop-color:#3465A4"/>
+	<stop  offset="0" style="stop-color:#9FBCE1"/>
+	<stop  offset="0" style="stop-color:#6B95CA"/>
+	<stop  offset="0.75" style="stop-color:#3D6AA5"/>
+	<stop  offset="1" style="stop-color:#386EB4"/>
+</linearGradient>
+<path id="path2142" sodipodi:nodetypes="ccccccscc" fill="url(#path2142_1_)" stroke="#204A87" stroke-width="1" d="M6.051,45.381
+	c1.514,1.685,5.72,2.448,7.584-0.814c0.813-1.425,2.408-5.409,9.523-11.813c1.195-1.075,2.462-3.533,1.388-4.858l-2.777-2.777
+	c-1.136-1.263-4.295-0.674-5.591,1.094c-3.862,5.285-10.172,9.493-11.596,10.001c-2.723,0.973-2.416,4.986-0.615,6.896L6.051,45.381
+	z"/>
+<path id="path2146" sodipodi:type="arc" sodipodi:rx="1.375" sodipodi:cx="41.875" sodipodi:ry="1.375" sodipodi:cy="37.5" fill="#FFFFFF" stroke="#A1A1A1" stroke-width="1.1386" d="
+	M42.789,38.943c0,0.767-0.622,1.389-1.388,1.389c-0.769,0-1.39-0.622-1.39-1.389c0-0.768,0.621-1.39,1.39-1.39
+	C42.167,37.554,42.789,38.176,42.789,38.943z"/>
+<path id="path3101" sodipodi:type="arc" sodipodi:rx="1.767767" sodipodi:cx="19.003494" sodipodi:ry="1.767767" sodipodi:cy="28.20101" opacity="0.6023" fill="#FFFFFF" enable-background="new    " d="
+	M20.479,26.682c0,0.641-0.52,1.16-1.16,1.16s-1.161-0.52-1.161-1.16l0,0c0-0.642,0.521-1.16,1.161-1.16S20.479,26.04,20.479,26.682
+	L20.479,26.682z"/>
+<linearGradient id="path3103_1_" gradientUnits="userSpaceOnUse" x1="-1.5742" y1="8.4531" x2="-3.0273" y2="11.1293" gradientTransform="matrix(1.0073 -0.0264 -0.0264 -1.0073 14.7218 44.7076)">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path id="path3103" sodipodi:nodetypes="cc" fill="none" stroke="url(#path3103_1_)" stroke-width="2.2945" stroke-linecap="round" stroke-linejoin="round" d="
+	M17.796,29.297c0,0-8.245,8.394-12.107,9.817"/>
+<path id="path2270" sodipodi:nodetypes="csccccscc" opacity="0.1989" fill="none" stroke="#FFFFFF" stroke-width="1" enable-background="new    " d="
+	M6.442,44.088c1.657,2.008,5.289,2.486,6.43-0.426c0.783-2,3.834-6.516,9.427-11.551c0.939-0.845,1.935-2.776,1.092-3.818
+	l-2.185-2.184c-0.893-0.992-3.375-0.529-4.395,0.86c-3.036,4.155-9.756,9.59-11.38,10.126c-2.515,0.831-2.043,3.705-0.627,5.206
+	L6.442,44.088z"/>
+<linearGradient id="path2247_1_" gradientUnits="userSpaceOnUse" x1="43.5664" y1="-45.9839" x2="45.0339" y2="-47.3753" gradientTransform="matrix(0.8781 -0.0173 -0.0173 -0.8781 -24.8669 -3.0681)">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+</linearGradient>
+<path id="path2247" sodipodi:nodetypes="cc" opacity="0.2784" fill="none" stroke="url(#path2247_1_)" stroke-width="2.2945" stroke-linecap="round" stroke-linejoin="round" enable-background="new    " d="
+	M20.264,31.18c0,0-8.421,7.609-10.251,12.488"/>
+</svg>

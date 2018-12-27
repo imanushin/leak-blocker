@@ -1,0 +1,21 @@
+﻿<common:ToolWindow x:Class="LeakBlocker.AdminView.Desktop.Controls.Standard.License.RequestCodeDialog"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+                   xmlns:buttons="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Buttons"
+                   xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+                   xmlns:resources="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+                   x:ClassModifier="internal"
+                   Title="{x:Static resources:AdminViewResources.EnterLicenseCode}">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="{x:Static resources:AdminViewResources.PleaseEnterLicenseCode}" Margin="3"/>
+        <layouts:SmartGrid Columns="Auto,*">
+            <TextBlock Grid.Column="0" Text="{x:Static resources:AdminViewResources.Code}" Margin="3"/>
+            <TextBox Grid.Column="1" Name="code" x:FieldModifier="private"  MinWidth="300" Margin="3" KeyUp="CodeTextKeyUp"/>
+        </layouts:SmartGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <buttons:OkButton Click="OkClickedHandler" Margin="3"/>
+            <buttons:CancelButton Click="CancelClickedHandler" Margin="3"/>
+        </StackPanel>
+    </StackPanel>
+</common:ToolWindow>

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42AF0E4E-BE03-43EB-8C5B-09C73EDFCEE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Server.Service</RootNamespace>
+    <AssemblyName>LeakBlocker.Server.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.Server.Service.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>$(ProjectDir)..\Binaries\LeakBlocker.Server.Service.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>..\CommonProperties\AdministratorPrivileges.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LeakBlocker.Server.Service.Engine.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="Generated\ServerObjectsGenerated_LeakBlockerServerSharedAdminViewCommunication.cs" />
+    <Compile Include="Generated\ServerObjectsGenerated_LeakBlockerServerSharedAgentCommunication.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InternalTools\AdminUsersStorage\AdminKeysStorage.cs" />
+    <Compile Include="InternalTools\AdminUsersStorage\AdminUserData.cs" />
+    <Compile Include="InternalTools\AdminUsersStorage\AdminUsers.cs" />
+    <Compile Include="InternalTools\AdminUsersStorage\IAdminKeysStorage.cs" />
+    <Compile Include="InternalTools\IAccountResolver.cs" />
+    <Compile Include="InternalTools\IAgentInstaller.cs" />
+    <Compile Include="InternalTools\IAgentSetupPasswordManager.cs" />
+    <Compile Include="InternalTools\Extensions\BaseTemporaryAccessConditionExtensions.cs" />
+    <Compile Include="InternalTools\Extensions\ProgramConfigurationExtensions.cs" />
+    <Compile Include="InternalTools\IAgentKeyManager.cs" />
+    <Compile Include="InternalTools\IAgentStatusObserver.cs" />
+    <Compile Include="InternalTools\LocalStorages\IAgentsSetupListStorage.cs" />
+    <Compile Include="InternalTools\LocalStorages\IConfigurationStorage.cs" />
+    <Compile Include="InternalTools\LocalStorages\ILicenseStorage.cs" />
+    <Compile Include="InternalTools\LocalStorages\IReportConfigurationStorage.cs" />
+    <Compile Include="InternalTools\IReportMailer.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AccountResolver.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentInstaller.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentSetupPasswordManager.cs" />
+    <Compile Include="InternalTools\IMailer.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\LocalStorages\AgentsSetupListStorage.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\Mailer.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\TemporaryRemoteFileStorage.cs" />
+    <Compile Include="Network\AdminView\AgentInstallationToolsServer.cs" />
+    <Compile Include="Network\AdminView\AgentSetupPasswordToolsServer.cs" />
+    <Compile Include="Network\Agent\AgentInstallationSecuritySessionManager.cs" />
+    <Compile Include="Network\Agent\IAgentNetworkSession.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentKeyManager.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\LocalStorages\BaseConfigurationManager.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\LocalStorages\ConfigurationStorage.cs" />
+    <Compile Include="InternalTools\LocalStorages\IBaseConfigurationManager.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\LocalStorages\LicenseStorage.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\LocalStorages\ReportConfigurationStorage.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\ReportMailer.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentStatusObserver.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AuditItemHelper.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentStatusStore.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\AgentManager.cs" />
+    <Compile Include="InternalTools\IAgentStatusStore.cs" />
+    <Compile Include="InternalTools\IAgentManager.cs" />
+    <Compile Include="InternalTools\IAuditItemHelper.cs" />
+    <Compile Include="InternalTools\InternalObjects.cs">
+      <DependentUpon>InternalObjects.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="InternalTools\IScopeManager.cs" />
+    <Compile Include="InternalTools\Extensions\RuleConditionExtensions.cs" />
+    <Compile Include="InternalTools\Extensions\RuleExtensions.cs" />
+    <Compile Include="InternalTools\ISecurityObjectCache.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\ScopeManager.cs" />
+    <Compile Include="InternalTools\SingletonImplementation\SecurityObjectCache.cs" />
+    <Compile Include="Network\Agent\AgentSessionManager.cs" />
+    <Compile Include="Network\AdminView\AccountToolsServer.cs" />
+    <Compile Include="Network\AdminView\AdminViewSecuritySessionManager.cs" />
+    <Compile Include="Network\AdminView\AuditToolsServer.cs" />
+    <Compile Include="Network\AdminView\ConfigurationToolsServer.cs" />
+    <Compile Include="Network\AdminView\DeviceToolsServer.cs" />
+    <Compile Include="Network\AdminView\IAdminViewWcfSession.cs" />
+    <Compile Include="Network\AdminView\LicenseToolsServer.cs" />
+    <Compile Include="Network\AdminView\LocalKeyAgreementTools.cs" />
+    <Compile Include="Network\AdminView\ReportToolsServer.cs" />
+    <Compile Include="Network\AdminView\StatusToolsServer.cs" />
+    <Compile Include="Engine\MainInvoker.cs" />
+    <Compile Include="Engine\MainService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engine\MainService.Designer.cs">
+      <DependentUpon>MainService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\Program.cs" />
+    <Compile Include="Network\Agent\AgentControlServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CommonProperties\CodeAnalysisDictionary.xml">
+      <Link>Properties\CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InternalTools\InternalObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>InternalObjects.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\RGB9RAST_x64.msi" />
+    <None Include="Resources\RGB9Rast_x86.msi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Storage\LeakBlocker.Libraries.Storage.csproj">
+      <Project>{0074249A-9FB0-4242-A942-9682D7FE8E7F}</Project>
+      <Name>LeakBlocker.Libraries.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.SystemTools\LeakBlocker.Libraries.SystemTools.csproj">
+      <Project>{b60c50fa-27c2-4396-8863-77d59ca7323c}</Project>
+      <Name>LeakBlocker.Libraries.SystemTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.ServerShared.AdminViewCommunication\LeakBlocker.ServerShared.AdminViewCommunication.csproj">
+      <Project>{4CF5C1BE-4C03-426A-A574-BEEA60A8B854}</Project>
+      <Name>LeakBlocker.ServerShared.AdminViewCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.ServerShared.AgentCommunication\LeakBlocker.ServerShared.AgentCommunication.csproj">
+      <Project>{19FE106D-3D78-4648-9A08-EA01EBAEC9A4}</Project>
+      <Name>LeakBlocker.ServerShared.AgentCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)..\..\InternalTools\Binaries\TestsGenerator.exe" "$(ProjectDir) "
+
+"$(ProjectDir)..\..\InternalTools\Binaries\Signer.exe" "$(TargetPath)"
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

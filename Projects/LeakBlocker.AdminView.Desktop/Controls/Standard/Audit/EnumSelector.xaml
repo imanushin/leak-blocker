@@ -1,0 +1,13 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Standard.Audit.EnumSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:audit="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Standard.Audit"
+                x:ClassModifier="internal">
+    <ListView Name="innerView" x:FieldModifier="private">
+        <ListView.ItemTemplate>
+            <DataTemplate DataType="audit:EnumView">
+                <CheckBox IsChecked="{Binding Path=IsSelected}" Content="{Binding}" Checked="ValueChangedHandler" Unchecked="ValueChangedHandler"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentControl>

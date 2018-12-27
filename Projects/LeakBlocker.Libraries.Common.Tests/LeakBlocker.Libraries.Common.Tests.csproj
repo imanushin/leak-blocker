@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{594980EA-78D2-42C8-B785-5EAE311D4377}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Libraries.Common.Tests</RootNamespace>
+    <AssemblyName>LeakBlocker.Libraries.Common.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProjectDir)..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>..\CommonProperties\CodeAnalysisRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\ExternalLibraries\Rhino.Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="Collections\ReadOnlyMatrixTest.cs" />
+    <Compile Include="Cryptography\AsymmetricPublicEncryptionKeyTest.cs" />
+    <Compile Include="Cryptography\AsymmetricPrivateEncryptionKeyTest.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryptionProviderTest.cs" />
+    <Compile Include="Entities\Settings\AuditMapTest.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\DeviceTypeRuleConditionTest.cs" />
+    <Compile Include="Entities\UserContactInformationTest.cs" />
+    <Compile Include="Implementations\ExceptionSuppressorTest.cs" />
+    <Compile Include="Cryptography\SymmetricEncryptionKeyTest.cs" />
+    <Compile Include="Collections\DisplacingCacheTest.cs" />
+    <Compile Include="Entities\Audit\AuditFilterTest.cs" />
+    <Compile Include="ConstantsStub.cs" />
+    <Compile Include="Entities\Audit\AuditItemTest.cs" />
+    <Compile Include="Entities\Audit\ReportFilterTest.cs" />
+    <Compile Include="Entities\DeviceAccessMapTest.cs" />
+    <Compile Include="Entities\DeviceDescriptionTest.cs" />
+    <Compile Include="Entities\Security\AccountSecurityIdentifierTest.cs" />
+    <Compile Include="Entities\Security\AgentEncryptionDataTest.cs" />
+    <Compile Include="Entities\Security\CredentialsTest.cs" />
+    <Compile Include="Entities\Security\DomainAccountTest.cs" />
+    <Compile Include="Entities\Security\DomainComputerAccountTest.cs" />
+    <Compile Include="Entities\Security\DomainComputerGroupAccountTest.cs" />
+    <Compile Include="Entities\Security\DomainComputerUserAccountTest.cs" />
+    <Compile Include="Entities\Security\DomainGroupAccountTest.cs" />
+    <Compile Include="Entities\Security\DomainUserAccountTest.cs" />
+    <Compile Include="Entities\Security\IScopeObjectTest.cs" />
+    <Compile Include="Entities\Security\LocalComputerAccountTest.cs" />
+    <Compile Include="Entities\Security\LocalGroupAccountTest.cs" />
+    <Compile Include="Entities\Security\LocalUserAccountTest.cs" />
+    <Compile Include="Entities\Security\OrganizationalUnitTest.cs" />
+    <Compile Include="Entities\Settings\ProgramConfigurationTest.cs" />
+    <Compile Include="Entities\Settings\Rules\ActionDataTest.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\CompositeRuleConditionTest.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\ComputerListRuleConditionTest.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\DeviceListRuleConditionTest.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\ComputerTemporaryAccessConditionTest.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\UserTemporaryAccessConditionTest.cs" />
+    <Compile Include="Entities\Settings\TemporaryAccess\DeviceTemporaryAccessConditionTest.cs" />
+    <Compile Include="Entities\Settings\Rules\Conditions\UserListRuleConditionTest.cs" />
+    <Compile Include="Entities\Settings\Rules\RuleTest.cs" />
+    <Compile Include="EnumGeneratedTests.cs" />
+    <Compile Include="FakeAsyncInvoker.cs" />
+    <Compile Include="Implementations\AsyncInvokerTest.cs" />
+    <Compile Include="License\LicenseInfoTest.cs" />
+    <Compile Include="License\LicenseLinkManagerTest.cs" />
+    <Compile Include="License\LicenseRequestDataTest.cs" />
+    <Compile Include="Cryptography\SymmetricEncryptionProviderTest.cs" />
+    <Compile Include="ReadOnlyObjectTest.cs" />
+    <Compile Include="BaseTest.cs" />
+    <Compile Include="Collections\DictionaryExtensionsTest.cs" />
+    <Compile Include="Collections\EnumerableExtensionsTest.cs" />
+    <Compile Include="Collections\ReadOnlyDictionaryTest.cs" />
+    <Compile Include="LogTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CheckTest.cs" />
+    <Compile Include="CommandLineTest.cs" />
+    <Compile Include="ConstantsTest.cs" />
+    <Compile Include="ReadOnlyObjectTestsGenerated.cs" />
+    <Compile Include="EnumerationExtensionsTest.cs" />
+    <Compile Include="Entities\Audit\ReportCreatorTest.cs" />
+    <Compile Include="StringExtensionsTest.cs" />
+    <Compile Include="StringNamedFormatterTest.cs" />
+    <Compile Include="SystemTools\FakeThreadPool.cs" />
+    <Compile Include="SystemTools\NativeThreadPoolTest.cs" />
+    <Compile Include="TimeTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.InternalLicenseManager\LeakBlocker.InternalLicenseManager.csproj">
+      <Project>{7CC426BC-B35B-4CCB-9994-EF4392D19147}</Project>
+      <Name>LeakBlocker.InternalLicenseManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.SystemTools\LeakBlocker.Libraries.SystemTools.csproj">
+      <Project>{B60C50FA-27C2-4396-8863-77D59CA7323C}</Project>
+      <Name>LeakBlocker.Libraries.SystemTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\Direct\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

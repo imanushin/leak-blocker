@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AgentComputerTurnedOn" xml:space="preserve">
+    <value>Computer {Computer} was turned on.</value>
+  </data>
+  <data name="AgentComputerTurningOff" xml:space="preserve">
+    <value>Computer {Computer} is being turned off.</value>
+  </data>
+  <data name="AgentInstallationFailed" xml:space="preserve">
+    <value>Agent installation failed on the computer {Computer} because of error: {TextData}</value>
+  </data>
+  <data name="AgentInstallationSucceeded" xml:space="preserve">
+    <value>Agent was successfully installed on computer {Computer}</value>
+  </data>
+  <data name="AgentInstallationWasNotRequired" xml:space="preserve">
+    <value>Agent setup was not completed: Agent is already installed. </value>
+  </data>
+  <data name="AgentIsNotResponding" xml:space="preserve">
+    <value>Agent on the computer {Computer} is not responding (but computer is turned on).</value>
+  </data>
+  <data name="AgentSetupStarted" xml:space="preserve">
+    <value>Agent setup started for computer {Computer}.</value>
+  </data>
+  <data name="AgentStarted" xml:space="preserve">
+    <value>Agent service was started on computer {Computer}.</value>
+  </data>
+  <data name="AgentStopped" xml:space="preserve">
+    <value>Agent service was stopped on computer {Computer}.</value>
+  </data>
+  <data name="AgentUninstalled" xml:space="preserve">
+    <value>Agent was uninstalled from computer {Computer}</value>
+  </data>
+  <data name="ComputerTurnedOff" xml:space="preserve">
+    <value>Computer {Computer} was turned off.</value>
+  </data>
+  <data name="ComputerTurnedOn" xml:space="preserve">
+    <value>Computer {Computer} was turned on.</value>
+  </data>
+  <data name="ConfigurationChanged" xml:space="preserve">
+    <value>Configuration was changed by user {User}</value>
+  </data>
+  <data name="DeviceAccessAllowed" xml:space="preserve">
+    <value>Access to device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="DeviceAccessAllowedNotLicensed" xml:space="preserve">
+    <value>Access to device {Device} on computer {Computer} was allowed because agent is not licensed.</value>
+  </data>
+  <data name="DeviceAccessBlocked" xml:space="preserve">
+    <value>Access to device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="DeviceAccessReadOnly" xml:space="preserve">
+    <value>Read-only access to device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="DeviceAccessTemporarilyAllowed" xml:space="preserve">
+    <value>Access to device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="DeviceAccessTemporarilyReadOnly" xml:space="preserve">
+    <value>Read-only access to device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="DeviceConnected" xml:space="preserve">
+    <value>Device {Device} was connected to computer {Computer}.</value>
+  </data>
+  <data name="DeviceDisconnected" xml:space="preserve">
+    <value>Device {Device} was disconnected from computer {Computer}.</value>
+  </data>
+  <data name="DomainMemberIsNotAccessible" xml:space="preserve">
+    <value>The domain member {TextData} does not exist in the domain {AdditionalTextData} however it is used in the current configuration.</value>
+  </data>
+  <data name="ErrorInAgentCommunications" xml:space="preserve">
+    <value>Communication with computer {Computer} failed due to an error: {TextData}</value>
+  </data>
+  <data name="ErrorInStatusUpdate" xml:space="preserve">
+    <value>Failed to update agents statuses because of error: {TextData}</value>
+  </data>
+  <data name="MainServiceStarted" xml:space="preserve">
+    <value>Server was started.</value>
+  </data>
+  <data name="MainServiceStopped" xml:space="preserve">
+    <value>Server was stopped.</value>
+  </data>
+  <data name="ReadFileAllowed" xml:space="preserve">
+    <value>Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was allowed. </value>
+  </data>
+  <data name="ReadFileAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was allowed. </value>
+  </data>
+  <data name="ReadFileBlocked" xml:space="preserve">
+    <value>Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="ReadFileBlockedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="ReadFileTemporarilyAllowed" xml:space="preserve">
+    <value>Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="ReadFileTemporarilyAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="ReadWriteFileAllowed" xml:space="preserve">
+    <value>Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="ReadWriteFileAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="ReadWriteFileBlocked" xml:space="preserve">
+    <value>Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="ReadWriteFileBlockedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="ReadWriteFileTemporarilyAllowed" xml:space="preserve">
+    <value>Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="ReadWriteFileTemporarilyAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Reading and writing file {TextData} from process {AdditionalTextData} by user {User} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="ReportsAreNotConfigured" xml:space="preserve">
+    <value>Unable to send report: report configuration has not been configured.</value>
+  </data>
+  <data name="SendingReportFailed" xml:space="preserve">
+    <value>Unable to send daily report: {TextData}</value>
+  </data>
+  <data name="ServerInaccessible" xml:space="preserve">
+    <value>Server is inaccessible from computer {Computer}.</value>
+  </data>
+  <data name="UnableToRefreshDomainData" xml:space="preserve">
+    <value>Unable to refresh data of {AdditionalTextData}: {TextData}</value>
+  </data>
+  <data name="UnplannedServiceShutdown" xml:space="preserve">
+    <value>Agent service on computer {Computer} had been terminated unexpectedly.</value>
+  </data>
+  <data name="UserLoggedOff" xml:space="preserve">
+    <value>User {User} logged on computer {Computer}.</value>
+  </data>
+  <data name="UserLoggedOn" xml:space="preserve">
+    <value>User {User} logged off computer {Computer}.</value>
+  </data>
+  <data name="WriteFileAllowed" xml:space="preserve">
+    <value>Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="WriteFileAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was allowed.</value>
+  </data>
+  <data name="WriteFileBlocked" xml:space="preserve">
+    <value>Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="WriteFileBlockedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was blocked.</value>
+  </data>
+  <data name="WriteFileTemporarilyAllowed" xml:space="preserve">
+    <value>Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+  <data name="WriteFileTemporarilyAllowedMultiple" xml:space="preserve">
+    <value>Multiple identical events ({Number}) occurred: Writing file {TextData} by user {User} from process {AdditionalTextData} on device {Device} on computer {Computer} was temporarily allowed.</value>
+  </data>
+</root>

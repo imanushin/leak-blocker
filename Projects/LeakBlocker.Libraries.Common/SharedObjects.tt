@@ -1,0 +1,36 @@
+﻿<#
+
+var objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "IEnvironment", "EnvironmentWrapper", false, "Environment" ),
+    new SingletonDeclaration( "IReportCreator", "ReportCreator" ),
+    new SingletonDeclaration( "IConstants", "Constants" ),
+    new SingletonDeclaration( "ICommandLine", "CommandLine" ),
+    new SingletonDeclaration( "IAsyncInvoker", "AsyncInvoker" ),
+    new SingletonDeclaration( "ILicenseLinkManager", "LicenseLinkManager" ),
+    new SingletonDeclaration( "IExceptionSuppressor", "ExceptionSuppressor" ),
+    new FactoryDeclaration( "IBaseNetworkHost", "BaseNetworkHost", initializerTypeNames: new [] {  
+		new InitializerParameterDeclaration { TypeName = "int", ParameterName = "tcpPort" },
+		new InitializerParameterDeclaration { TypeName = "TimeSpan", ParameterName = "operationTimeout" },
+    } ),
+    new FactoryDeclaration( "IScheduler", "Scheduler", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "Action", ParameterName = "action" },
+		new InitializerParameterDeclaration { TypeName = "TimeSpan", ParameterName = "interval" },
+		new InitializerParameterDeclaration { TypeName = "bool", ParameterName = "suspended", DefaultValue = "true" } }  ),
+		
+	new FactoryDeclaration( "IThreadPool", "NativeThreadPool", propertyName:"ThreadPool", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "int", ParameterName = "threadCount" }
+		}  ),
+};
+
+#>
+
+using LeakBlocker.Libraries.Common.CommonInterfaces;
+using LeakBlocker.Libraries.Common.Entities.Audit;
+using LeakBlocker.Libraries.Common.Implementations;
+using LeakBlocker.Libraries.Common.License;
+using LeakBlocker.Libraries.Common.Network;
+using LeakBlocker.Libraries.Common.SystemTools;
+using LeakBlocker.Libraries.Common.Entities.Settings;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

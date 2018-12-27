@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="LittleStyles.xaml"/>
+        <ResourceDictionary Source="CommonColorsDictionary.xaml"/>
+        <ResourceDictionary Source="TabControlDictionary.xaml"/>
+        <ResourceDictionary Source="TabItemDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="MenuItem" BasedOn="{StaticResource MenuItemStyle}"/>
+    <Style TargetType="ContentControl" BasedOn="{StaticResource ContentControlStyle}"/>
+    <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
+    <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}"/>
+
+</ResourceDictionary>

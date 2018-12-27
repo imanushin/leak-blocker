@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA27685B-AC7E-4981-A64E-55D44E6EADE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeakBlocker.Agent.Core.Tests</RootNamespace>
+    <AssemblyName>LeakBlocker.Agent.Core.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>True</IsCodedUITest>
+    <TestProjectType>CodedUITest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\CommonProperties\LeakBlocker.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\Rhino.Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonProperties\Version.cs">
+      <Link>Properties\Version.cs</Link>
+    </Compile>
+    <Compile Include="AgentDataStorageObjects\DeviceStateTest.cs" />
+    <Compile Include="AgentDataStorageObjects\DataDiskCacheTest.cs" />
+    <Compile Include="BaseTestImplementation.cs" />
+    <Compile Include="DataCacheTest.cs" />
+    <Compile Include="EnumerationConverterTest.cs" />
+    <Compile Include="External\AgentControlServiceClientImplementation.cs" />
+    <Compile Include="External\AgentDataStorageImplementation.cs" />
+    <Compile Include="External\AgentInstallerImplementation.cs" />
+    <Compile Include="External\AgentPrivateStorageImplementation.cs" />
+    <Compile Include="External\AgentServiceControllerImplementation.cs" />
+    <Compile Include="External\AuditStorageImplementations.cs" />
+    <Compile Include="External\CommandLineImplementation.cs" />
+    <Compile Include="External\DeviceProviderImplementation.cs" />
+    <Compile Include="External\FileSystemAccessControllerImplementation.cs" />
+    <Compile Include="External\FileSystemDriverControllerImplementation.cs" />
+    <Compile Include="External\FileToolsImplementation.cs" />
+    <Compile Include="External\HardwareProfileImplementation.cs" />
+    <Compile Include="External\Mailslot.cs" />
+    <Compile Include="External\PrivateFileImplementation.cs" />
+    <Compile Include="External\PrivateRegistryStorageImplementation.cs" />
+    <Compile Include="External\LocalDataCacheImplementation.cs" />
+    <Compile Include="External\StackStorageImplementation.cs" />
+    <Compile Include="External\StateNotifierImplementation.cs" />
+    <Compile Include="External\SystemAccountToolsImplementation.cs" />
+    <Compile Include="AgentConstantsTest.cs" />
+    <Compile Include="AgentDataStorageTest.cs" />
+    <Compile Include="External\TimeProviderImplementation.cs" />
+    <Compile Include="AgentInstallerTest.cs" />
+    <Compile Include="AgentPrivateStorageTest.cs" />
+    <Compile Include="AgentTaskManagerTest.cs" />
+    <Compile Include="AuditStorageTest.cs" />
+    <Compile Include="FileSystemAccessControllerTest.cs" />
+    <Compile Include="IntegrationTests\DriverTests.cs" />
+    <Compile Include="LocalControlServiceTest.cs" />
+    <Compile Include="Settings\AgentComputerStateTest.cs" />
+    <Compile Include="Settings\CommonActionDataTest.cs" />
+    <Compile Include="Settings\Implementations\ProgramConfigurationCheckerTest.cs" />
+    <Compile Include="Settings\Implementations\RuleConditionCheckerTest.cs" />
+    <Compile Include="Settings\Implementations\TemporaryAccessConditionsCheckerTest.cs" />
+    <Compile Include="Settings\RuleCheckResultTest.cs" />
+    <Compile Include="StackStorageTest.cs" />
+    <Compile Include="StateNotifierTest.cs" />
+    <Compile Include="VersionIndependentPrivateStorageTest.cs" />
+    <Compile Include="EnumGeneratedTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ReadOnlyObjectTestsGenerated.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeakBlocker.Agent.Core\LeakBlocker.Agent.Core.csproj">
+      <Project>{B7DCD030-CA24-4126-B87C-469E4BAD9203}</Project>
+      <Name>LeakBlocker.Agent.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common.Tests\LeakBlocker.Libraries.Common.Tests.csproj">
+      <Project>{594980ea-78d2-42c8-b785-5eae311d4377}</Project>
+      <Name>LeakBlocker.Libraries.Common.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.Common\LeakBlocker.Libraries.Common.csproj">
+      <Project>{F3AD6E13-2706-46C5-9109-BF94C77B47D6}</Project>
+      <Name>LeakBlocker.Libraries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.SystemTools.Tests\LeakBlocker.Libraries.SystemTools.Tests.csproj">
+      <Project>{428c380e-21a0-499b-974f-13e30e8fe4cd}</Project>
+      <Name>LeakBlocker.Libraries.SystemTools.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.Libraries.SystemTools\LeakBlocker.Libraries.SystemTools.csproj">
+      <Project>{b60c50fa-27c2-4396-8863-77d59ca7323c}</Project>
+      <Name>LeakBlocker.Libraries.SystemTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.ServerShared.AdminViewCommunication\LeakBlocker.ServerShared.AdminViewCommunication.csproj">
+      <Project>{4CF5C1BE-4C03-426A-A574-BEEA60A8B854}</Project>
+      <Name>LeakBlocker.ServerShared.AdminViewCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeakBlocker.ServerShared.AgentCommunication\LeakBlocker.ServerShared.AgentCommunication.csproj">
+      <Project>{19fe106d-3d78-4648-9a08-ea01ebaec9a4}</Project>
+      <Name>LeakBlocker.ServerShared.AgentCommunication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

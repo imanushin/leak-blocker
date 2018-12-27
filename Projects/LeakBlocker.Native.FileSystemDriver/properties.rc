@@ -1,0 +1,12 @@
+#include <windows.h>
+#include <ntverp.h>
+		
+#include "../CommonProperties/version.h"
+
+#define VER_FILETYPE                VFT_DRV            
+#define VER_FILESUBTYPE             VFT2_DRV_SYSTEM        
+#define VER_FILEDESCRIPTION_STR     "Leak Blocker filesystem driver"        
+#define VER_INTERNALNAME_STR        "LeakBlockerFsDriver" FILENAME_VERSION_PART ".sys"        
+#define VER_ORIGINALFILENAME_STR    "LeakBlockerFsDriver" FILENAME_VERSION_PART ".sys"    
+									
+#include "common.ver"						

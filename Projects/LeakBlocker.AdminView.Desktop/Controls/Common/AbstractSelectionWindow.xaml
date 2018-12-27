@@ -1,0 +1,54 @@
+﻿<common:ToolWindow x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.AbstractSelectionWindow"
+                   x:ClassModifier="internal" 
+                   KeyUp="ControlKeyUp"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+                   xmlns:autoComplete="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.AutoComplete"
+                   xmlns:generated="clr-namespace:LeakBlocker.AdminView.Desktop.Generated"
+                   Loaded="WindowLoaded"
+                   RestrictWidth="MinValue" >
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="3">
+            <TextBlock Name="title"  VerticalAlignment="Center" x:FieldModifier="private" />
+            <common:HelpTooltip x:Name="helpTooltip" VerticalAlignment="Center" x:FieldModifier="private" />
+        </StackPanel>
+        <autoComplete:HighlightedAutoCompleteBox 
+            x:Name="searchTextBox" 
+            x:FieldModifier="private"
+            Grid.Row="2" 
+            MinWidth="300" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Stretch"
+            Margin="3"/>
+
+        <Button Margin="3" 
+                Grid.Row="0" 
+                Grid.Column="1"
+                Style="{StaticResource TranspatentButtonStyle}"
+                VerticalAlignment="Top" 
+                Click="FindInOtherLocation" 
+                x:Name="findInOtherLocationButton"
+                Width="20">
+            <generated:OtherSearch/>
+        </Button>
+        <Button Margin="3" 
+                Click="OkClickedHandler"
+                Style="{StaticResource TranspatentButtonStyle}"
+                Grid.Row="2" 
+                Grid.Column="1" 
+                Width="20">
+            <generated:ContextMenuRightArrow/>
+        </Button>
+    </Grid>
+</common:ToolWindow>

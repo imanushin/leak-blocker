@@ -1,0 +1,31 @@
+﻿<#@ assembly name="$(ProjectDir)..\..\InternalTools\Binaries\CodeGen.dll" #>
+<#@ import namespace="CodeGen" #>
+<#@ output extension=".cs" #>
+<#@ template language="c#" hostspecific="true" #>
+<#
+
+// Visibility, creation type, interface, implementation
+// e. g.:
+// "Singleton", "IDisposable", "Window" 
+
+var objects = new StaticObjectDeclaration[] 
+{
+    new SingletonDeclaration( "ICredentialsManager",    "CredentialsManager" ),
+    new SingletonDeclaration( "IConfigurationManager", "ConfigurationManager" ),
+    new FactoryDeclaration(   "IDatabaseModel",     "DatabaseModel",     isInternal:true ),
+    new SingletonDeclaration( "IDatabaseConstants", "DatabaseConstants", isInternal:true ),
+    new SingletonDeclaration( "IIndexInitializer", "IndexInitializer", isInternal:true ),
+    new SingletonDeclaration( "ICrossRequestCache", "CrossRequestCache", isInternal:true ),
+    new SingletonDeclaration( "IAuditItemsManager", "AuditItemsManager", isInternal:false ),
+    new SingletonDeclaration( "IDevicesManager", "DevicesManager", isInternal:false ),
+    new SingletonDeclaration( "IAccountManager", "AccountManager", isInternal:false ),
+    new SingletonDeclaration( "IAgentEncryptionDataManager", "AgentEncryptionDataManager", isInternal:false ),
+    new SingletonDeclaration( "IDatabaseInitializer", "DatabaseInitializer", isInternal:false ),
+};
+
+#>
+
+using LeakBlocker.Libraries.Storage;
+using LeakBlocker.Libraries.Storage.InternalTools;
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

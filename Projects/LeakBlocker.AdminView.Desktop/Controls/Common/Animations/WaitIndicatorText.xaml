@@ -1,0 +1,13 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.Animations.WaitIndicatorText"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:animations="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Animations"
+                x:Name="root"
+                Height="24"
+                x:FieldModifier="private"
+                x:ClassModifier="internal">
+    <StackPanel Orientation="Horizontal" >
+        <animations:WaitIndicatorControl Height="{Binding ElementName=root, Path=ActualHeight}" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding ElementName=root, Path=Text}" VerticalAlignment="Center" TextTrimming="WordEllipsis"/>
+    </StackPanel>
+</ContentControl>

@@ -1,0 +1,16 @@
+﻿<Application x:Class="LeakBlocker.AdminView.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LeakBlocker.AdminView.Desktop"
+             StartupUri="Controls\Simple\MainWindow.xaml" x:ClassModifier="internal">
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:InactivePictureEffect x:Key="InactivePictureEffect" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Controls/Common/Converters/ConvertersDictionary.xaml"/>
+                <ResourceDictionary Source="Generated/SvgImageResources.xaml"/>
+                <ResourceDictionary Source="Themes\Generics.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

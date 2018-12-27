@@ -1,0 +1,25 @@
+﻿<TabItem x:Class="LeakBlocker.AdminView.Desktop.Controls.Simple.UsersTab"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+         xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+         xmlns:adminViewCommunication="clr-namespace:LeakBlocker.ServerShared.AdminViewCommunication;assembly=LeakBlocker.ServerShared.AdminViewCommunication"
+         xmlns:resources="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+         x:ClassModifier="internal"
+         Style="{StaticResource TabItemStyle}"
+         Background="{x:Static SystemColors.ControlLightBrush}"
+         Header="{x:Static resources:AdminViewResources.Users}">
+    
+    <common:ItemsList x:Name="users" AddButtonClicked="AddButtonClicked" Margin="3" Grid.Row="1" Title="{x:Static resources:AdminViewResources.UsersWhiteListDescription}">
+        <common:ItemsList.ItemTemplate>
+            <DataTemplate DataType="adminViewCommunication:Scope">
+                <ContentControl>
+                    <layouts:SmartGrid Columns="Auto,*">
+                        <ContentControl Content="{Binding Converter={StaticResource ScopeToImageConverter}}" Width="16" Height="16" Margin="0,0,5,0"/>
+                        <TextBlock Text="{Binding}" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </layouts:SmartGrid>
+                </ContentControl>
+            </DataTemplate>
+        </common:ItemsList.ItemTemplate>
+    </common:ItemsList>
+</TabItem>

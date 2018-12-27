@@ -1,0 +1,13 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.AutoComplete.HintControl"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                Style="{StaticResource ContentControlStyle}"
+                IsVisibleChanged="IsVisibleChangedHandler"
+                x:ClassModifier="internal" Margin="0,1">
+    <StackPanel Orientation="Horizontal">
+        <ContentControl Name="imageContainer" x:FieldModifier="private" MaxWidth="16" Margin="0,0,3,0" />
+        <TextBlock Name="beforeHighlighted" x:FieldModifier="private" />
+        <TextBlock Name="highlighted" x:FieldModifier="private" FontStyle="Italic" FontWeight="ExtraBold" />
+        <TextBlock Name="afterHighlighted" x:FieldModifier="private" />
+    </StackPanel>
+</ContentControl>

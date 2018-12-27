@@ -1,0 +1,70 @@
+﻿<#@ assembly name="$(ProjectDir)..\..\InternalTools\Binaries\CodeGen.dll" #>
+<#@ import namespace="CodeGen" #>
+<#@ output extension=".cs" #>
+<#@ template language="c#" hostspecific="true" #>
+<#
+
+// Visibility, creation type, interface, implementation
+// e. g.:
+// "Singleton", "IDisposable", "Window" 
+
+StaticObjectDeclaration[] objects = new StaticObjectDeclaration[] 
+{ 
+    new SingletonDeclaration( "ITimeProvider", "TimeProvider" ),
+
+    new SingletonDeclaration( "ISystemAccountTools", "SystemAccountTools" ),
+    
+    new SingletonDeclaration( "IFileTools", "FileTools" ),
+
+    new SingletonDeclaration( "IPrerequisites", "Prerequisites" ),
+    
+    new SingletonDeclaration( "IDeviceProvider", "DeviceProvider" ),
+
+    new FactoryDeclaration( "IDomainSnapshot", "DomainSnapshot", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "Credentials", ParameterName = "credentials" } } ),
+                
+    new FactoryDeclaration( "IDomainSnapshot", "DomainSnapshot", propertyName:"EmptyDomainSnapshot" ),
+                
+    new FactoryDeclaration( "ILocalDataCache", "LocalDataCache" ),
+                   
+    new FactoryDeclaration( "IWindowsService", "WindowsService", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "name" },
+        new InitializerParameterDeclaration { TypeName = "SystemAccessOptions", ParameterName = "options", DefaultValue = "default(SystemAccessOptions)" } } ),
+
+    new FactoryDeclaration( "IPrivateRegistryStorage", "PrivateRegistryStorage", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "Guid", ParameterName = "identifier" } } ),
+        
+    new FactoryDeclaration( "IGlobalFlag", "GlobalFlag", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "name" } } ),
+
+    new FactoryDeclaration( "IPrivateFile", "PrivateFile", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "path" } } ),
+        
+    new FactoryDeclaration( "IMailslotClient", "MailslotClient", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "name" },
+        new InitializerParameterDeclaration { TypeName = "int", ParameterName = "messageSize" } } ),
+        
+    new FactoryDeclaration( "IMailslotServer", "MailslotServer", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "name" },
+        new InitializerParameterDeclaration { TypeName = "int", ParameterName = "messageSize" } } ),
+
+    new FactoryDeclaration( "IDriverController", "DriverController", initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "IDriverControllerHandler", ParameterName = "eventHandler", DefaultValue = "null" } } ),
+};
+
+#>
+
+using LeakBlocker.Libraries.SystemTools.Entities;
+using LeakBlocker.Libraries.SystemTools.Implementations;
+using LeakBlocker.Libraries.SystemTools.Entities.Implementations;
+using LeakBlocker.Libraries.Common.Entities.Security;
+using LeakBlocker.Libraries.Common.Collections;
+using LeakBlocker.Libraries.SystemTools.Devices;
+using LeakBlocker.Libraries.SystemTools.Devices.Implementations;
+using LeakBlocker.Libraries.SystemTools.ProcessTools;
+using LeakBlocker.Libraries.SystemTools.ProcessTools.Implementations;
+using LeakBlocker.Libraries.SystemTools.Drivers;  
+using LeakBlocker.Libraries.SystemTools.Network;  
+using System.Collections.Generic;         
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

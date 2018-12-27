@@ -1,0 +1,42 @@
+﻿<ContentControl x:Class="LeakBlocker.AdminView.Desktop.Controls.Common.ComputerScopeList"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+                xmlns:converters="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Converters"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:adminViewCommunication="clr-namespace:LeakBlocker.ServerShared.AdminViewCommunication;assembly=LeakBlocker.ServerShared.AdminViewCommunication"
+                xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+                xmlns:generated="clr-namespace:LeakBlocker.AdminView.Desktop.Generated"
+                xmlns:resources="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+                mc:Ignorable="d"
+             x:ClassModifier="internal" >
+    <ContentControl.Resources>
+        <converters:ScopeTypeToStringConveter x:Key="ScopeTypeToStringConveter"/>
+        <ContextMenu x:Key="ScopeContextMenu">
+            <MenuItem Header="{x:Static resources:AdminViewResources.UpdateCredentials}" Click="UpdateCredentialsClick">
+                <MenuItem.Icon>
+                    <generated:ObjectTypeUser/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </ContentControl.Resources>
+
+    <common:ItemsList x:FieldModifier="private" Grid.Row="2" x:Name="scopeList" AddButtonClicked="AddItemClicked" ItemsWereRemoved="RemoveClicked">
+        <common:ItemsList.ItemTemplate>
+            <DataTemplate DataType="adminViewCommunication:Scope">
+                <ContentControl ContextMenu="{StaticResource ScopeContextMenu}">
+                    <layouts:SmartGrid Columns="Auto,*">
+
+                        <ContentControl Width="24"
+                                        Height="24"
+                                        Margin="0,0,5,0"
+                                        Content="{Binding Converter={StaticResource ScopeToImageConverter}}"
+                                        ToolTip="{Binding Path=ScopeType, Converter={StaticResource ScopeTypeToStringConveter}}"/>
+                        <TextBlock Text="{Binding}" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </layouts:SmartGrid>
+                </ContentControl>
+            </DataTemplate>
+        </common:ItemsList.ItemTemplate>
+    </common:ItemsList>
+</ContentControl>

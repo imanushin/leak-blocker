@@ -1,0 +1,76 @@
+﻿<#@ assembly name="$(ProjectDir)..\..\InternalTools\Binaries\CodeGen.dll" #>
+<#@ import namespace="CodeGen" #>
+<#@ output extension=".cs" #>
+<#@ template language="c#" hostspecific="true" #>
+<#
+
+// Visibility, creation type, interface, implementation
+// e. g.:
+// "Singleton", "IDisposable", "Window" 
+
+StaticObjectDeclaration[] objects = new StaticObjectDeclaration[] 
+{ 
+    new FactoryDeclaration( "IStackStorage", "StackStorage", true, initializerTypeNames: new [] { 
+		new InitializerParameterDeclaration { TypeName = "string", ParameterName = "file" } } ),
+
+    new FactoryDeclaration( "IStackStorage", "StackStorage", true, "AlternativeStackStorage" ),
+     
+    new SingletonDeclaration( "IAgentInstaller", "AgentInstaller", true ),
+    
+    new SingletonDeclaration( "IAgentPrivateStorage", "AgentPrivateStorage", true ),
+    new SingletonDeclaration( "IAgentControlService", "AgentControlServiceClient", true ),
+    new SingletonDeclaration( "IAgentConstants", "AgentConstants", true ),
+    new SingletonDeclaration( "IVersionIndependentPrivateStorage", "VersionIndependentPrivateStorage", true ),
+    new SingletonDeclaration( "IRuleConditionChecker", "RuleConditionChecker", true ),
+    new SingletonDeclaration( "ITemporaryAccessConditionsChecker", "TemporaryAccessConditionsChecker", true ),
+    new SingletonDeclaration( "IProgramConfigurationChecker", "ProgramConfigurationChecker", true ),
+                                
+    new FactoryDeclaration( "IAgentDataStorage", "AgentDataStorage", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "string", ParameterName = "file" } } ),
+
+    new FactoryDeclaration( "ILocalControlClient", "LocalControlClient", true ),
+
+    new FactoryDeclaration( "IAgentTaskManager", "AgentTaskManager", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "IAuditStorage", ParameterName = "auditStorage" },
+        new InitializerParameterDeclaration { TypeName = "IDriverController", ParameterName = "driverController" },
+        new InitializerParameterDeclaration { TypeName = "IAgentDataStorage", ParameterName = "dataStorage" },
+        new InitializerParameterDeclaration { TypeName = "IAgentServiceController", ParameterName = "serviceController" } } ),
+                 
+    new FactoryDeclaration( "IAuditStorage", "AuditStorage", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "IStackStorage", ParameterName = "stackStorage" },
+        new InitializerParameterDeclaration { TypeName = "IAgentDataStorage", ParameterName = "dataStorage" } } ),
+
+    new FactoryDeclaration( "ILocalControlServer", "LocalControlServer", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "ILocalControlServerHandler", ParameterName = "eventHandler" } } ),
+
+    new FactoryDeclaration( "IStateNotifier", "StateNotifier", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "IStateNotifierHandler", ParameterName = "handler" },
+        new InitializerParameterDeclaration { TypeName = "IReadOnlyCollection<BaseUserAccount>", ParameterName = "users" },
+        new InitializerParameterDeclaration { TypeName = "IReadOnlyCollection<DeviceDescription>", ParameterName = "devices" },
+        new InitializerParameterDeclaration { TypeName = "ReadOnlyDictionary<DeviceDescription, DeviceAccessType>", ParameterName = "deviceStates" } } ),
+                
+    new FactoryDeclaration( "IFileSystemAccessController", "FileSystemAccessController", true ),
+        
+    new FactoryDeclaration( "IHardwareProfile", "HardwareProfile", true, initializerTypeNames: new [] { 
+        new InitializerParameterDeclaration { TypeName = "CachedComputerData", ParameterName = "computer" },
+        new InitializerParameterDeclaration { TypeName = "IReadOnlyCollection<CachedUserData>", ParameterName = "users" },
+        new InitializerParameterDeclaration { TypeName = "IReadOnlyCollection<DeviceDescription>", ParameterName = "devices" },
+        new InitializerParameterDeclaration { TypeName = "ProgramConfiguration", ParameterName = "settings" } } ),
+};
+
+#>
+
+using LeakBlocker.Agent.Core.Implementations;
+using LeakBlocker.Agent.Core.Settings;
+using LeakBlocker.Agent.Core.Settings.Implementations;
+using LeakBlocker.ServerShared.AgentCommunication;   
+using LeakBlocker.Libraries.Common.Network;       
+using LeakBlocker.Libraries.SystemTools.Drivers;  
+using LeakBlocker.Libraries.Common.Entities;  
+using System.Collections.Generic;         
+using LeakBlocker.Libraries.Common.Entities.Security; 
+using LeakBlocker.Libraries.SystemTools.Entities;
+using LeakBlocker.Libraries.Common.Entities.Settings;   
+using LeakBlocker.Libraries.Common.Collections;        
+
+<#@ include file="$(ProjectDir)..\CommonProperties\StaticObjects.cs" #>

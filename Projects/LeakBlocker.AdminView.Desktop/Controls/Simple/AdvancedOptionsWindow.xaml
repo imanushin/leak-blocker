@@ -1,0 +1,32 @@
+﻿<common:ToolWindow x:Class="LeakBlocker.AdminView.Desktop.Controls.Simple.AdvancedOptionsWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:buttons="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Buttons"
+                   xmlns:common="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common"
+                   xmlns:simple="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Simple"
+                   xmlns:layouts="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Common.Layouts"
+                   xmlns:agentSetupPasswordControls="clr-namespace:LeakBlocker.AdminView.Desktop.Controls.Standard.AgentSetupPasswordControls"
+                   xmlns:resources="clr-namespace:LeakBlocker.AdminView.Desktop.Resources"
+                   Title="{x:Static resources:AdminViewResources.AdvancedOptions}" 
+                   SizeToContent="Manual"
+                   x:ClassModifier="internal"
+                   MinWidth="500" 
+                   MinHeight="450"
+                   Width="550"
+                   Height="450"
+                   RestrictHeight="None"
+                   RestrictWidth="None">
+    <layouts:SmartGrid Rows="*, Auto">
+        <TabControl Margin="3" Style="{StaticResource TabControlStyle}">
+            <simple:DevicesTab x:Name="devices" x:FieldModifier="private"/>
+            <simple:UsersTab x:Name="users" x:FieldModifier="private"/>
+            <simple:ReportsTab x:Name="reports" x:FieldModifier="private"/>
+            <agentSetupPasswordControls:AgentSetupPasswordTab/>
+        </TabControl>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <buttons:OkButton Click="OkClicked" Margin="3"/>
+            <buttons:CancelButton Click="CancelClicked" Margin="3"/>
+        </StackPanel>
+    </layouts:SmartGrid>
+</common:ToolWindow>
